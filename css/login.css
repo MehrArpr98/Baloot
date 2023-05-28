@@ -1,0 +1,137 @@
+@font-face {
+    font-family: "iranyekan";
+    src: url("../lib/iranyekan-cufonfonts/Qs_Iranyekan.ttf") format("truetype");
+}
+
+:root {
+    --main-yellow: #fab222;
+    --light-yellow: #efe4cf;
+    --light-green: #83a380;
+    --red: #c81e32;
+    --border-radius-size: 7px;
+    --font-family: IRANYekan;
+}
+body {
+    font-family: var(--font-family) !important;
+    position: relative;
+}
+
+a {
+    cursor: pointer;
+    color: brown;
+}
+
+.row {
+    margin: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.box {
+    border: 2px solid #efebe7;
+    box-shadow: 0 0 5pt 2pt #efebe7;
+    border-radius: 7px;
+    text-align: center;
+    padding: 20px 20px 30px;
+    margin: 160px 0;
+}
+
+.logo-img {
+    margin-bottom: 30px;
+    width: 100px;
+}
+
+.img-header {
+    height: 135px;
+    position: absolute;
+    transition: .5s;
+    -webkit-mask-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0,0,0,1)), to(rgba(0,0,0,0)));
+}
+
+    .img-header.img-header-right-top {
+        right: 0;
+        top: 0;
+    }
+
+    .img-header.img-header-left-bottom {
+        left: 0;
+        transform: scale(-1);
+        bottom: 0;
+    }
+
+    .img-header.img-header-right-bottom {
+        right: 0;
+        bottom: 0;
+        transform: scaleY(-1);
+    }
+
+    .img-header.img-header-left-top {
+        left: 0;
+        top: 0;
+        transform: scaleX(-1);
+    }
+
+.box input {
+    background-color: var(--light-yellow);
+    border-radius: var(--border-radius-size);
+    border: none;
+    height: 35px;
+    width: 81%;
+    text-align: right;
+    direction: rtl;
+    margin: 0;
+    outline: none;
+    transition: .35s ease-in-out;
+}
+
+    .box input:focus {
+        outline: none;
+        border: 1px solid var(--light-yellow);
+        box-shadow: 0 0 5pt 2pt #efebe7;
+        background-color: white;
+    }
+
+.logInButton {
+    padding: 1% 36%;
+    font-size: 1.9rem;
+    font-weight: 600;
+    background-color: var(--main-yellow);
+    border-radius: var(--border-radius-size);
+    color: #ffffff;
+    /*transition: .35s ease-in-out;*/
+}
+
+    .logInButton:hover {
+        text-decoration: none;
+        color: #ffffff;
+        filter: brightness(0.9);
+    }
+
+.text {
+    margin: 20px 0 0;
+    padding: 0 10%;
+}
+
+.input-lable,
+.warn {
+    text-align: right;
+    padding: 0 10%;
+    margin-bottom: 10px;
+}
+
+.input-lable {
+    font-weight: 600;
+    font-size: 1.3rem;
+}
+
+    .input-lable span {
+        color: var(--main-yellow);
+    }
+
+.warn {
+    margin: 5px 0 40px;
+    font-size: 1.16rem;
+    color: brown;
+}
+

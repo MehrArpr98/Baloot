@@ -1,0 +1,71 @@
+﻿<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<!--<link rel="stylesheet" href="lib/font-awesome/font-awesome.min.css">-->
+<!-- bootstrap CSS -->
+<link rel="stylesheet" href="lib/bootstrap/bootstrap.min.css">
+
+<!-- bootstrap JS -->
+<script src="lib/bootstrap/bootstrap.min.js"></script>
+<link rel="stylesheet" href="css/profilePage.css">
+
+<script src="lib/jquery/jquery.min.js"></script>
+<style>
+</style>
+<div class="row row1">
+    <div class="col-8 col-lg-8 col-md-8 col-sm-5 box">
+        <div class="profile-form-container change-password">
+            <div class="title-part">
+                <img class="title-part-img" src="images/shop3/user-icon.png" />
+                <h3 class="title-part-name">پروفایل کاربر</h3>
+            </div>
+            <hr />
+            <form action="/User/ChangePassword" method="post" id="change-password-form">
+                <div class="row">
+                    <div class="col-6 col-lg-6 col-md-6 col-sm-12">
+                        <label for="#password">
+                            ایمیل
+                            <input type="password" asp-for="Email" required>
+                            <i class="fa fa-eye"></i>
+                            <span asp-validation-for="CurrentPassword" class="invalid-text2" data-valmsg-replace="true">این فیلد اجباری است</span>
+                        </label>
+                    </div>
+                    <div class="col-6 col-lg-6 col-md-6 col-sm-12">
+                        <label for="#password">
+                            نام و نام خانوادگی
+                            <input type="password" asp-for="Name" required>
+                            <i class="fa fa-eye"></i>
+                            <span asp-validation-for="ConfirmPassword" class="invalid-text2" data-valmsg-replace="true">این فیلد اجباری است</span>
+                        </label>
+                    </div>
+                    <div class="col-6 col-lg-6 col-md-6 col-sm-12">
+                        <label for="#password">
+                            کلمه ‌عبور
+                            <input type="password" asp-for="CurrentPassword" required>
+                            <i class="fa fa-eye"></i>
+                            <span asp-validation-for="CurrentPassword" class="invalid-text2" data-valmsg-replace="true">این فیلد اجباری است</span>
+                        </label>
+                    </div>
+
+                    <div class="col-6 col-lg-6 col-md-6 col-sm-12">
+                        <label for="#password">
+                            آدرس
+                            <!--<input type="password" asp-for="CurrentPassword" required>-->
+                            <textarea ></textarea>
+                            <!--<i class="fa fa-eye"></i>
+                            <span asp-validation-for="CurrentPassword" class="invalid-text2" data-valmsg-replace="true">این فیلد اجباری است</span>-->
+                        </label>
+                    </div>
+                </div>
+
+
+
+
+                <label for=""></label>
+                <button data-ripple>ثبت اطلاعات</button>
+            </form>
+        </div>
+    </div>
+</div>
+
+<script src="lib/jquery-validation/dist/jquery.validate.js"></script>
+<script src="lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js"></script>
+<script src="js/profile.js"></script>

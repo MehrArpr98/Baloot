@@ -1,0 +1,695 @@
+﻿<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<!--<link rel="stylesheet" href="lib/font-awesome/font-awesome.min.css">-->
+<!-- jQuery library -->
+<script src="lib/jquery/jquery.min.js"></script>
+
+<!-- bootstrap CSS -->
+<link rel="stylesheet" href="lib/bootstrap/bootstrap.min.css">
+<!-- bootstrap JS -->
+<script src="lib/bootstrap/bootstrap.min.js"></script>
+
+<!-- Fancybox CSS -->
+<link rel="stylesheet" href="lib/fancybox/fancybox.css">
+<!-- Fancybox JS -->
+<script src="lib/fancybox/fancybox.js"></script>
+
+<!-- VUE JS -->
+<script src="lib/vue/vue.js"></script>
+
+<!-- rangeSlider css-->
+<!--<link rel="stylesheet" href="css/rangeSlider.css">-->
+
+<!-- switchToggle css-->
+<link rel="stylesheet" href="css/switchToggle.css">
+
+<link rel="stylesheet" href="css/header.css">
+<link rel="stylesheet" href="css/footer.css">
+<link rel="stylesheet" href="css/mainPage.css">
+<link rel="stylesheet" href="css/categoryPage.css">
+<script src="lib/featherIcons/feather.min.js"></script>
+
+
+<div id="app">
+    <header id="main">
+        <img src="images/shop3/logo.png" class="img-fluid logoImg">
+        <h4 class="logoName">چوب بلوط</h4>
+        <h6 class="logoDesc">میز و صندلی اداری</h6>
+        <div class="header d-flex justify-content-between">
+            <div class="header-right ">
+                <nav class="navigation">
+                    <li class="navigation__item">
+                        <a href="categoryPage.html" class="navigation__link">
+                            <span class="navigation__link__icon" data-feather="grid"></span>
+                            <span class="navigation__link__title">محصولات</span>
+                        </a>
+                    </li>
+                    <li class="navigation__item">
+                        <a href="index.html" class="navigation__link">
+                            <span class="navigation__link__icon" data-feather="home"></span>
+                            <span class="navigation__link__title">خانه</span>
+                        </a>
+                    </li>
+                    <li class="navigation__item navigation__item--has-submenu">
+                        <a href="#" class="navigation__link">
+                            <span class="navigation__link__icon" data-feather="list"></span>
+                            <span class="navigation__link__title">دسته بندی</span>
+                        </a>
+                        <div class="submenu">
+                            <div class="submenu__content">
+                                <div class="submenu__box">
+                                    <ul class="submenu-navigation">
+                                        <li class="submenu-navigation__item">
+                                            <a href="#" class="submenu-navigation__link">
+                                                <!--<i class="fa fa-chair submenu-navigation__icon"></i>-->
+                                                <img class="submenu-navigation__icon" src="images/shop3/office-chair.png">
+                                                <span class="submenu-navigation__title">صندلی</span>
+                                            </a>
+                                        </li>
+                                        <li class="submenu-navigation__item">
+                                            <a href="#" class="submenu-navigation__link">
+                                                <!--<i class="fa fa-table submenu-navigation__icon"></i>-->
+                                                <img class="submenu-navigation__icon" src="images/shop3/desk.png">
+                                                <span class="submenu-navigation__title">
+                                                    میز
+                                                    <!--<span class="label">popular</span>-->
+                                                </span>
+                                            </a>
+                                        </li>
+
+                                    </ul>
+                                </div>
+                                <div class="submenu__box">
+
+                                </div>
+                                <!--<div class="submenu__box">
+                                <img class="submenu__image" src="https://images.unsplash.com/photo-1661423063753-ea9121c6abb2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=3840&q=80">
+                            </div>-->
+                            </div>
+                            <!--<div class="submenu__footer">
+                            <a href="#" class="submenu__link">
+                                See more
+                                <span class="submenu__icon" data-feather="arrow-right"></span>
+                            </a>
+                        </div>-->
+                        </div>
+                    </li>
+                </nav>
+            </div>
+
+            <div class="header-left ">
+                <div class="header-left-user">
+                    <a data-toggle="collapse" href="#list" role="button" aria-expanded="false" aria-controls="list" class="header-left-user-link">
+                        <span class="" data-feather="user"></span>
+                    </a>
+                    <!--href="logInPage.html"-->
+                </div>
+                <div class="collapse multi-collapse" id="list"
+                     style="position:absolute;top:40px;left:0px;z-index: 1000;background:white;padding:5px;box-shadow: rgb(203 197 197) 0px 0px 3pt 1pt">
+                    <div class="card card-body">
+                        <div>
+                            <a href="logInPage.html" class="" style="">
+                                ورود
+                            </a>
+                        </div>
+                        <hr style="margin:5px" />
+                        <div>
+                            <a href="profilePage.html" class="">
+                                پروفایل من
+                            </a>
+                        </div>
+                        <hr style="margin:5px" />
+                        <div>
+                            <a href="changePasswordPage.html" class="">
+                                تغییر کلمه عبور
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="header-left-basket ">
+                    <a href="basket.html" class="header-left-basket-link">
+                        <span class="" data-feather="shopping-cart"></span>
+                    </a>
+                    <div class="basket-number">0</div>
+                </div>
+                <div id="basket-message" style="opacity:0">به سبد خرید اضافه شد.</div>
+                <!--<div class="header-left-search-box p-0">
+                <input class="w3-border-0" type="text" placeholder=" جست و جو در دورگا... " name="search">
+                <div class="search-icon">
+                    <i class="fa fa-search"></i>
+                </div>
+            </div>-->
+            </div>
+        </div>
+        <div id="boxes">
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+        </div>
+
+    </header>
+    <div class="row content">
+
+        <div id="category-main-div" class="row">
+            <div class="col-lg-10 col-md-10 .col-sm-10">
+                <input type='hidden' id='current_page' />
+                <input type='hidden' id='show_per_page' />
+                <ul id="pagingBox" class="category-ul">
+                    <li v-for="item in items" class="category-li">
+                        <div class="suggest-card">
+                            <a v-bind:href="'productPage.html?id=' + item.id">
+                                <div v-if="item.percent>0" class="suggest-card__description-percent">
+                                    <span>{{ item.percent }}%</span>
+                                </div>
+                                <div class="suggest-img" v-bind:style="{ backgroundImage: 'url(' + item.imgSrc + ')' }">
+                                </div>
+                                <div class="suggest-text">
+                                    <div class="suggest-card__title">
+                                        {{ item.name }}
+                                    </div>
+                                    <div class="itemId" style="display:none"> {{ item.id }}</div>
+                                    <div class="suggest-card__description">
+                                        <div class="suggest-card__description-price">
+                                            <div class="suggest-card__description-price">
+                                                <span>تومان</span>
+                                                <span>{{ toFarsiAndComma(item.price) }}</span>
+                                                <span v-if="item.percent>0">{{ toFarsiAndComma(item.oldPrice) }}</span>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                                <div class="add-basket" name="plus-basket" onclick="dontCallLink(event)">
+                                    <div>افزودن به سبد خرید</div>
+                                    <span class="" data-feather="shopping-cart"></span>
+                                </div>
+
+                            </a>
+                        </div>
+
+                    </li>
+                </ul>
+                <div id='page_navigation'></div>
+
+            </div>
+
+            <div class="col-lg-2 col-md-2 .col-sm-2" id="filter-part">
+                <div class="filter-part-remove-filter">
+                    <span class="icon-stack" title="حذف فیلتر" data-toggle="tooltip">
+                        <i class="fa fa-filter icon-stack-2x"></i>
+                        <i class="fa fa-remove icon-stack-1x"></i>
+                    </span>
+                </div>
+                <hr />
+                <div class="group">
+                    <h4 class="filter-part-title"><i class="fa fa-circle"></i>دسته بندی</h4>
+                    <div id="items">
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="item" id="group-item1" value="option1">
+                            <label class="form-check-label" for="group-item1">
+                                صندلی چرخ دار
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="item" id="group-item2" value="option2">
+                            <label class="form-check-label" for="group-item2">
+                                صندلی میهمان
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="item" id="group-item3" value="option3">
+                            <label class="form-check-label" for="group-item3">
+                                میز مدیریت
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="item" id="group-item4" value="option4">
+                            <label class="form-check-label" for="group-item4">
+                                میز و صندلی کنفرانس
+                            </label>
+                        </div>
+                    </div>
+
+                </div>
+                <hr />
+                <div class="rangeSlider">
+                    <h4 class="filter-part-title"><i class="fa fa-circle"></i>قیمت</h4>
+                    <div class="numbers">
+                        <div>
+                            از
+                            <input type="text" class="range2LeftValue" id="range2LeftValue" value="0" />
+                            <span class="toman">تومان</span>
+
+                        </div>
+                        <div>
+                            تا
+                            <input type="text" class="range2RightValue" id="range2RightValue" value="500000" />
+                            <!--:value=numberWithCommas(500000)-->
+                            <span class="toman">تومان</span>
+                        </div>
+                    </div>
+                </div>
+                <hr />
+                <div class="color">
+                    <h4 class="filter-part-title"><i class="fa fa-circle"></i>رنگ</h4>
+                    <div id="items">
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="color-item" id="color-item1" value="option1">
+                            <label class="form-check-label" for="color-item1">
+                                قرمز
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="color-item" id="color-item2" value="option2">
+                            <label class="form-check-label" for="color-item2">
+                                آبی
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="color-item" id="color-item3" value="option3">
+                            <label class="form-check-label" for="color-item3">
+                                زرد
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                <hr />
+                <div>
+                    <div class="show-exist-data">
+                        <span class="show-exist-data-title filter-part-title"><i class="fa fa-circle"></i>نمایش کالاهای موجود</span>
+                        <label class="switch">
+                            <input type="checkbox">
+                            <span class="slider round"></span>
+                        </label>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <div id="footer" class="row d-flex justify-content-around">
+        <div class="col-6 col-lg-6 pt-4 col-sm-12 origin">
+            <h3 class="footer-item-title"> درباره</h3>
+            <div class="footer-item-desc">
+                فروشگاه اینترنتی بلوط بهترین و بیشترین محصولات از برندهای اورجینال خارجی را در اختیار دارد. سوراو گلچینی از بهترین برند های دنیا را برای شما تامین کرده است. خرید از فروشگاه سوراو مانند خرید از آنلاین شاپ معتبر اروپایی است. با توجه به تنوع زیاد محصولات و برند ها، کارشناسان سوراو به شما مشاوره تخصصی رایگان می دهد. فروشگاه سوراو مرکز خرید محصولات اورجینال از برندهای متنوع با قیمت مناسب است. انتخاب بهترین محصول، مناسب پوست و موی شما از بین ۱۰۰ مارک مختلف بسیار مهم و سخت است.
+            </div>
+
+        </div>
+        <div class="col-3 col-lg-3 pt-4 col-sm-12 ">
+            <h3 class="footer-item-title"> مجوز و تاییدیه ها</h3>
+            <div class="footer-item-desc">
+                <img src="images/shop3/namad1.webp" class="namad-img" />
+                <img src="images/shop3/namad2.webp" class="namad-img" />
+                <img src="images/shop3/namad3.webp" class="namad-img" />
+            </div>
+        </div>
+        <div class="col-3 col-lg-3 col-sm-12 p-0 pt-4 d-flex justify-content-between part1">
+            <!--<div class="col-6 col-lg-6">-->
+            <h3 class="footer-item-title">ارتباط با ما </h3>
+            <div class="footer-item-desc">
+                <div class="desc-item"> <i class="fa fa-home"></i>آدرس: <span>تهران، بلوار ميرداماد، جنب دفينه، بازار بزرگ ميرداماد، ساختمان اداری، ط 4، واحد 412</span></div>
+                <div class="desc-item"><i class="fa fa-phone"></i>تماس با ما: <span>021-57826000</span></div>
+                <div class="desc-item"><i class="fa fa-clock-o"></i>ساعت پاسخگويي: <span>شنبه تا چهار شنبه از ساعت 8:30 تا 17:00</span></div>
+                <div class="desc-item"> <i class="fa fa-envelope"></i>پست الکترونیکی: <span> online@rojagroup.com</span></div>
+            </div>
+            <!--</div>-->
+            <!--<div class="col-4 col-lg-4 information">
+                <h3 class="footer-item-title">اطلاعات حساب کاربری </h3>
+                <div class="footer-item-desc">
+                    <a href="#" class="desc-item"><i class="fa fa-user"></i>پروفایل</a>
+                    <a href="#" class="desc-item"><i class="fa fa-comments"></i>نظرات من</a>
+                    <a href="#" class="desc-item"> <i class="fa fa-list"></i>سفارشات</a>
+                </div>
+            </div>-->
+        </div>
+
+        <p class="col-12 col-lg-12 pt-4 col-sm-12 origin" id="last-line">© کلیه حقوق متعلق به فروشگاه اینترنتی بلوط میباشد.</p>
+    </div>
+
+</div>
+
+<script src="js/mainPage.js"></script>
+<script>
+    feather.replace();
+</script>
+<script>
+
+    jQuery(document).ready(function () {
+        setTimeout(function () {
+            var show_per_page = 8;
+            var number_of_items = $('#pagingBox li').length;
+            console.log(number_of_items)
+            var number_of_pages = Math.ceil(number_of_items / show_per_page);
+
+            $('#current_page').val(0);
+            $('#show_per_page').val(show_per_page);
+
+            var navigation_html = '<a class="next_link" href="javascript:next();">بعد</a>';
+            var current_link = 0;
+            while (number_of_pages > current_link) {
+                navigation_html += '<a class="page_link" href="javascript:go_to_page(' + current_link + ')" longdesc="' + current_link + '">' + (current_link + 1) + '</a>';
+                current_link++;
+            }
+            navigation_html += '<a class="previous_link" href="javascript:previous();">قبل</a>';
+
+            $('#page_navigation').html(navigation_html);
+
+            $('#page_navigation .page_link:first').addClass('active_page');
+            $('#pagingBox').children().css('display', 'none');
+            $('#pagingBox').children().slice(0, show_per_page).css('display', 'block');
+        }, 100);
+
+    });
+
+
+    function previous() {
+        new_page = parseInt($('#current_page').val()) - 1;
+        if ($('.active_page').prev('.page_link').length == true) {
+            go_to_page(new_page);
+            goTo('category-main-div');
+        }
+    }
+
+    function next() {
+        new_page = parseInt($('#current_page').val()) + 1;
+        if ($('.active_page').next('.page_link').length == true) {
+            go_to_page(new_page);
+            goTo('category-main-div');
+        }
+    }
+
+    function go_to_page(page_num) {
+        var show_per_page = parseInt($('#show_per_page').val());
+        start_from = page_num * show_per_page;
+        end_on = start_from + show_per_page;
+        $('#pagingBox').children().css('display', 'none').slice(start_from, end_on).css('display', 'block');
+
+        /*get the page link that has longdesc attribute of the current page and add active_page class to it
+        and remove that class from previously active page link*/
+        $('.page_link[longdesc=' + page_num + ']').addClass('active_page').siblings('.active_page').removeClass('active_page');
+        $('#current_page').val(page_num);
+        goTo('category-main-div');
+    }
+    function goTo(id) {
+        let pos = document.querySelector('#' + id);
+        window.scrollTo({
+            top: pos.offsetTop - 100,
+            behavior: 'smooth',
+        });
+    }
+
+    //if ($('.switch').find('input[type=checkbox]').prop('checked') == true) {
+
+    //}
+    var filterInputs = $('#filter-part').find('input');
+
+    for (const filterInput of filterInputs) {
+        filterInput.addEventListener('input', function () {
+            console.log('box clicked');
+        });
+    }
+
+        const urlParams = new URLSearchParams(window.location.search);
+          const productGroupId = urlParams.get('id');
+    console.log('productGroupId : ',productGroupId);  
+
+
+     var basketValues = [];
+    var app = new Vue({
+        el: "#app",
+        data: {
+            basketValues: [],
+            allPrice: 0,
+            items: [
+                {
+                    name: "صندلی اداری مدل سارا",
+                    id: 1,
+                    groupId: 3,
+                    price: 100000,
+                    percent: 0,
+                    oldPrice: 1790000,
+                    rates: [5, 5, 2, 5],
+                    rate: 0,
+                    comments: ["بد بود", "راضی بودم", "خوب بود"],
+                    //{ text: "ضعیف", monthAndYearDate: "شهریور ۱۴۰۱ ", day:"۱۶", name:"علی علایی", desc:"بد بود"}
+                    imgSrc: 'images/shop3/chair6.jpg'
+                },
+                {
+                    name: "صندلی اداری مدل کارمند",
+                    id: 2,
+                    groupId: 5,
+                    price: 200000,
+                    percent: 3,
+                    oldPrice: 1790000,
+                    rates: [4, 4, 5, 4, 5, 4],
+                    rate: 0,
+                    comments: ["راضی بودم", "خوب بود"],
+                    imgSrc: 'images/shop3/chair7.jpg'
+                },
+                {
+                    name: "صندلی اداری مدل صندلی کارمند",
+                    id: 3,
+                    groupId: 1,
+                    price: 300000,
+                    percent: 3,
+                    oldPrice: 1790000,
+                    rates: [3, 4, 5, 2],
+                    rate: 0,
+                    comments: ["بد بود", "راضی بودم", "خوب بود", "راضی بودم", "خوب بود"],
+                    imgSrc: 'images/shop3/chair8.jpg'
+                },
+                {
+                    name: "صندلی کنفرانس مشکی مدل کلاسیک ",
+                    id: 4,
+                    groupId: 2,
+                    price: 400000,
+                    percent: 0,
+                    oldPrice: 1790000,
+                    rates: [1, 4, 3, 2],
+                    rate: 0,
+                    comments: ["بد بود", "راضی بودم", "راضی بودم", "خوب بود"],
+                    imgSrc: 'images/shop3/chair9.jpg'
+                },
+                {
+                    name: "صندلی راحتی مدل آرامش",
+                    id: 5,
+                    groupId: 3,
+                    price: 500000,
+                    percent: 3,
+                    oldPrice: 1790000,
+                    rates: [3, 4, 5, 2],
+                    rate: 0,
+                    comments: ["بد بود"],
+                    imgSrc: 'images/shop3/chair10.jpg'
+                },
+                {
+                    name: "صندلی مبلی راحتی مدل سایه",
+                    id: 6,
+                    groupId: 2,
+                    price: 600000,
+                    percent: 3,
+                    oldPrice: 1790000,
+                    rates: [3, 4, 5, 2],
+                    rate: 0,
+                    comments: ["بد بود", "راضی بودم"],
+                    imgSrc: 'images/shop3/chair11.jpg'
+                },
+                {
+                    name: "صندلی کنفرانس مدل صندلی مدیر  ",
+                    id: 7,
+                    groupId: 2,
+                    price: 600000,
+                    percent: 3,
+                    oldPrice: 1790000,
+                    rates: [3, 4, 5, 2],
+                    rate: 0,
+                    comments: ["بد بود", "راضی بودم"],
+                    imgSrc: 'images/shop3/chair12.jpg'
+                    },
+                {
+                    name: "صندلی کنفرانس مدل صندلی مدیر",
+                    id: 8,
+                    groupId: 5,
+                    price: 200000,
+                    percent: 0,
+                    oldPrice: 1790000,
+                    rates: [4, 4, 5, 4, 5, 4],
+                    rate: 0,
+                    comments: ["راضی بودم", "خوب بود"],
+                    imgSrc: 'images/shop3/chair8.jpg'
+                },
+                {
+                    name: "صندلی اداری مدل صندلی کارمند",
+                    id: 9,
+                    groupId: 1,
+                    price: 300000,
+                    percent: 3,
+                    oldPrice: 1790000,
+                    rates: [3, 4, 5, 2],
+                    rate: 0,
+                    comments: ["بد بود", "راضی بودم", "خوب بود", "راضی بودم", "خوب بود"],
+                    imgSrc: 'images/shop3/chair9.jpg'
+                },
+                {
+                    name: "صندلی اداری مدل مینیمال",
+                    id: 10,
+                    groupId: 2,
+                    price: 400000,
+                    percent: 0,
+                    oldPrice: 1790000,
+                    rates: [1, 4, 3, 2],
+                    rate: 0,
+                    comments: ["بد بود", "راضی بودم", "راضی بودم", "خوب بود"],
+                    imgSrc: 'images/shop3/chair10.jpg'
+                },
+                {
+                    name: "صندلی کلاسیک مدل کارمند",
+                    id: 11,
+                    groupId: 3,
+                    price: 500000,
+                    percent: 3,
+                    oldPrice: 1790000,
+                    rates: [3, 4, 5, 2],
+                    rate: 0,
+                    comments: ["بد بود"],
+                    imgSrc: 'images/shop3/chair11.jpg'
+                },
+                {
+                    name: "صندلی مدیر مدل نازنین",
+                    id: 12,
+                    groupId: 2,
+                    price: 600000,
+                    percent: 3,
+                    oldPrice: 1790000,
+                    rates: [3, 4, 5, 2],
+                    rate: 0,
+                    comments: ["بد بود", "راضی بودم"],
+                    imgSrc: 'images/shop3/chair12.jpg'
+                },
+            ],
+        },
+        methods: {
+            searchToAddBasket: function (i) {
+                var array = this.items;
+                var x = {};
+                for (var j = 0; j < array.length; j++) {
+                    if (i == array[j].id) {
+                        x = {
+                            name: array[j].name,
+                            price: array[j].price,
+                            imgSrc: array[j].imgSrc,
+                            id: array[j].id
+                        }
+                        return x;
+                    }
+                }
+                return x;
+            },
+            searchToRemoveBasket: function (i) {
+                var array = this.basketValues;
+                var price = 0;
+                for (var j = 0; j < array.length; j++) {
+                    if (i == array[j].id) {
+                        price = array[j].price;
+                        this.basketValues.splice(j, 1);
+                        return price;
+                    }
+                }
+
+            },
+            setBasketValues: function () {
+                this.basketValues = basketValues;
+            },
+            calculateRate(arr) {
+                return arr.reduce((a, b) => a + b, 0) / arr.length
+            },
+            toPersianDigits(x) {
+
+                var id = ['۰', '۱', '۲', '۳', '۴', '۵', '۶', '۷', '۸', '۹'];
+                return x.replace(/[0-9]/g, function (w) {
+                    return id[+w]
+                });
+            },
+            numberWithCommas(x) {
+                return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+            },
+            numberToFixed(x) {
+                return x.toFixed(1);
+            },
+            toFarsiAndComma(x) {
+                var val = x;
+                if (val != Math.floor(val)) {
+                    val = this.numberToFixed(val);
+                }
+                val = this.numberWithCommas(val);
+                val = this.toPersianDigits(val);
+
+                return val;
+            }
+
+        },
+
+    });
+
+     $('[name="plus-basket"]').click(function () {
+
+        var basketNumber = $('.basket-number').text();
+        basketNumber = parseInt(basketNumber);
+        if (basketNumber == 0) {
+            $('.card__description p:last-child').addClass('d-none')
+            $('.basket-price-part').removeClass("d-none");
+            $('.basket-button').removeClass("d-none");
+        }
+
+        basketNumber = basketNumber + 1;
+        $('.basket-number').text(basketNumber);
+
+         var id = Number($(this).parent().parent().find('.itemId').text());
+         console.log('id : ',id)
+        var data = app.searchToAddBasket(id);
+
+        basketValues.push(data)
+        app.setBasketValues();
+
+
+        var sum = 0;
+        for (var i = 0; i < basketValues.length; i++) {
+            sum += Number(basketValues[i].price);
+        }
+        app.allPrice = sum;
+        //$('.basket-price').text(sum);
+        //console.log('Xadd  :', basketValues)
+    });
+
+
+    $(document).on('click', '.remove-from-basket', function () {
+
+        var basketNumber = $('.basket-number').text();
+        basketNumber = parseInt(basketNumber);
+        basketNumber = basketNumber - 1;
+        if (basketNumber == 0) {
+            $('.card__description p:last-child').removeClass('d-none')
+            $('.basket-price-part').addClass("d-none");
+            $('.basket-button').addClass("d-none");
+        }
+
+        $('.basket-number').text(basketNumber);
+
+        var id = $(this).parent().find('[name="hiddenId"]').text();
+       // console.log('id : ', id)
+        var removedPrice = Number(app.searchToRemoveBasket(id));
+        app.setBasketValues();
+
+        //var sum = Number($('.basket-price').text()) - removedPrice;
+        //$('.basket-price').text(sum);
+        var sum = Number(app.allPrice) - removedPrice;
+        app.allPrice = sum;
+         //console.log('Xremove  :', basketValues)
+
+    });
+function dontCallLink(event) {
+        event.preventDefault()
+    }
+</script>

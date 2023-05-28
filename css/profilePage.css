@@ -1,0 +1,143 @@
+@font-face {
+    font-family: "iranyekan";
+    src: url("../lib/iranyekan-cufonfonts/Qs_Iranyekan.ttf") format("truetype");
+}
+
+:root {
+    --main-yellow: #fab222;
+    --light-gray: #f3f3f3;
+    --light-green: #83a380;
+    --red: #c81e32;
+    --border-radius-size: 7px;
+    --font-family: IRANYekan;
+}
+body {
+    font-family: var(--font-family) !important;
+    position: relative;
+}
+
+a {
+    cursor: pointer;
+    color: brown;
+}
+
+.row1 {
+    margin: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.box {
+    border: 2px solid #efebe7;
+    box-shadow: 0 0 5pt 2pt #efebe7;
+    border-radius: 7px;
+    padding: 20px;
+    margin: 160px 0;
+}
+
+.title-part {
+    display: flex;
+    direction: rtl;
+    align-items: center;
+}
+
+    .title-part .title-part-img {
+        width: 50px;
+        border-radius: 50%;
+        margin-left: 5px;
+    }
+
+    .title-part .title-part-name {
+        text-align: right;
+        margin: 0;
+    }
+
+label {
+    text-align: right;
+    font-size: 1.1rem;
+    float: right;
+    margin-bottom: 2rem;
+    width: 100%;
+}
+
+.box input,
+.box textarea {
+    background-color: var(--light-gray);
+    border-radius: var(--border-radius-size);
+    border: none;
+    height: 35px;
+    width: calc(100% - 15%);
+    margin: 0;
+    margin-left: 15%;
+    margin-top: 4px;
+    min-width: 200px;
+    text-align: right;
+    direction: rtl;
+    outline: none;
+    transition: .35s ease-in-out;
+}
+
+    .box input:focus,
+    .box textarea:focus {
+        outline: none;
+        border: 1px solid var(--light-yellow);
+        box-shadow: 0 0 5pt 2pt #efebe7;
+        background-color: white;
+    }
+
+textarea {
+    resize: vertical;
+}
+
+.logInButton {
+    padding: 1% 36%;
+    font-size: 1.9rem;
+    font-weight: 600;
+    background-color: var(--main-yellow);
+    border-radius: var(--border-radius-size);
+    color: #ffffff;
+    /*transition: .35s ease-in-out;*/
+}
+
+    .logInButton:hover {
+        text-decoration: none;
+        color: #ffffff;
+        filter: brightness(0.9);
+    }
+
+.text {
+    margin: 20px 0 0;
+    padding: 0 10%;
+}
+
+.input-lable,
+.warn {
+    text-align: right;
+    padding: 0 10%;
+    margin-bottom: 10px;
+}
+
+.input-lable {
+    font-weight: 600;
+    font-size: 1.3rem;
+}
+
+    .input-lable span {
+        color: var(--main-yellow);
+    }
+
+.warn {
+    margin: 5px 0 40px;
+    font-size: 1.16rem;
+    color: brown;
+}
+
+button {
+    outline: none;
+    border: none;
+    padding: 8px;
+    border-radius: 4px;
+    background: #dd8c21;
+    color: white;
+}

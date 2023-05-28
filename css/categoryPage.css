@@ -1,0 +1,182 @@
+@font-face {
+    font-family: "Yekan";
+    src: url("../lib/Yekan/Yekan.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "DastNevis";
+    src: url("../lib/dastNevis/Far_DastNevis.otf") format("truetype");
+}
+
+body {
+    font-family: var(--font-family) !important
+}
+
+#category-main-div {
+    padding: 20px 0;
+}
+
+.category-ul {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0;
+}
+
+.category-li {
+    width: 25%;
+    height: 340px;
+    margin-bottom: 30px;
+}
+
+.suggest-card {
+    padding: 1px 0 10px;
+}
+
+#page_navigation {
+    clear: both;
+    margin: 20px 0;
+    width: 100%;
+    float: right;
+    text-align: center;
+}
+
+    #page_navigation a {
+        padding: 3px 10px;
+        border: 1px solid var(--main-yellow);
+        border-radius: 7px;
+        margin: 2px;
+        color: black;
+        text-decoration: none;
+    }
+
+.active_page {
+    background: var(--main-yellow);
+    color: white !important;
+}
+    
+#filter-part {
+    position: sticky;
+    top: 115px;
+}
+    #filter-part .filter-part-remove-filter {
+        margin-bottom: 42px;
+        text-align: right;
+        position: relative;
+        cursor:pointer;
+    }
+
+.show-exist-data {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    direction: rtl;
+}
+
+.filter-part-title {
+    font-size: 1.2rem;
+    text-align: right;
+    font-weight: bold;
+}
+
+    .filter-part-title i {
+        float: right;
+        color: var(--main-yellow);
+        margin-left: 2px;
+    }
+
+.icon-stack-1x,
+.icon-stack-2x {
+    position: absolute;
+    left: -5px;
+    width: 100%;
+    text-align: right;
+}
+
+.icon-stack-1x {
+    bottom: -24px;
+    left: 0px;
+}
+
+.icon-stack-2x {
+    font-size: 2em;
+}
+
+.group #items,
+.color #items {
+    /*margin: 25px 0;*/
+    border: 1px solid #d1d1d1;
+    padding: 10px;
+    background: #f3f3f3;
+    border-radius: 4px;
+}
+
+.group .form-check,
+.color .form-check {
+    text-align: right;
+}
+
+    .group .form-check .form-check-input,
+    .color .form-check .form-check-input {
+        float: right;
+        margin: 0;
+    }
+
+    .group .form-check .form-check-label,
+    .color .form-check .form-check-label {
+        font-size: 1rem;
+        margin-right: 4px;
+    }
+
+.rangeSlider .numbers {
+    margin: 25px 0;
+    direction: rtl;
+}
+
+    .rangeSlider .numbers div {
+        margin: 15px 0;
+        font-size: 1.5rem;
+    }
+
+        .rangeSlider .numbers div input {
+            font-size: 1.4rem;
+            font-weight: bold;
+            font-family: 'Yekan';
+            width: 64%;
+            border: 1px solid #eeeeee;
+            border-radius: 4px;
+            outline: none;
+        }
+
+            .rangeSlider .numbers div input:focus {
+                box-shadow: 0 0 5pt 2pt #e7ded5;
+            }
+
+        .rangeSlider .numbers div .toman {
+            font-size: 1.2rem;
+            font-weight: bold;
+            font-family: 'DastNevis';
+        }
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input[type=number] {
+  -moz-appearance: textfield;
+}
+/*@media (min-width: 1200px){
+    .col-lg-10 {
+    width: 80%;
+}
+    .col-lg-2 {
+    width: 20%;
+    
+}
+}*/
+.suggest-card {
+    opacity: 1;
+    transform: translateX(0px);
+}

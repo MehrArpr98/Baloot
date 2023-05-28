@@ -1,0 +1,1235 @@
+﻿<!-- fontAwesome -->
+<link rel="stylesheet" href="lib/font-awesome-4.7.0/css/font-awesome.min.css">
+<!-- jQuery library -->
+<script src="lib/jquery/jquery.min.js"></script>
+<!-- bootstrap -->
+<link rel="stylesheet" href="lib/bootstrap/bootstrap.min.css">
+<script src="lib/bootstrap/bootstrap.min.js"></script>
+<!-- Fancybox-->
+<link rel="stylesheet" href="lib/fancybox/fancybox.css">
+<script src="lib/fancybox/fancybox.js"></script>
+<!-- VUE JS -->
+<script src="lib/vue/vue.js"></script>
+
+<link rel="stylesheet" href="css/header.css">
+<link rel="stylesheet" href="css/footer.css">
+<link rel="stylesheet" href="css/mainPage.css">
+<link rel="stylesheet" href="css/productPage.css">
+<script src="js/animation.js"></script>
+
+<div id="app">
+    <header id="main">
+        <img src="images/shop3/logo.png" class="img-fluid logoImg">
+        <h4 class="logoName">چوب بلوط</h4>
+        <h6 class="logoDesc">میز و صندلی اداری</h6>
+        <div class="header d-flex justify-content-between">
+            <div class="header-right ">
+                <nav class="navigation">
+                    <li class="navigation__item">
+                        <a href="categoryPage.html" class="navigation__link">
+                            <span class="navigation__link__icon" data-feather="grid"></span>
+                            <span class="navigation__link__title">محصولات</span>
+                        </a>
+                    </li>
+                    <li class="navigation__item">
+                        <a href="index.html" class="navigation__link">
+                            <span class="navigation__link__icon" data-feather="home"></span>
+                            <span class="navigation__link__title">خانه</span>
+                        </a>
+                    </li>
+                    <li class="navigation__item navigation__item--has-submenu">
+                        <a href="#" class="navigation__link">
+                            <span class="navigation__link__icon" data-feather="list"></span>
+                            <span class="navigation__link__title">دسته بندی</span>
+                        </a>
+                        <div class="submenu">
+                            <div class="submenu__content">
+                                <div class="submenu__box">
+                                    <ul class="submenu-navigation">
+                                        <li class="submenu-navigation__item">
+                                            <a href="#" class="submenu-navigation__link">
+                                                <!--<i class="fa fa-chair submenu-navigation__icon"></i>-->
+                                                <img class="submenu-navigation__icon" src="images/shop3/office-chair.png">
+                                                <span class="submenu-navigation__title">صندلی</span>
+                                            </a>
+                                        </li>
+                                        <li class="submenu-navigation__item">
+                                            <a href="#" class="submenu-navigation__link">
+                                                <!--<i class="fa fa-table submenu-navigation__icon"></i>-->
+                                                <img class="submenu-navigation__icon" src="images/shop3/desk.png">
+                                                <span class="submenu-navigation__title">
+                                                    میز
+                                                    <!--<span class="label">popular</span>-->
+                                                </span>
+                                            </a>
+                                        </li>
+
+                                    </ul>
+                                </div>
+                                <div class="submenu__box">
+
+                                </div>
+                                <!--<div class="submenu__box">
+                                <img class="submenu__image" src="https://images.unsplash.com/photo-1661423063753-ea9121c6abb2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=3840&q=80">
+                            </div>-->
+                            </div>
+                            <!--<div class="submenu__footer">
+                            <a href="#" class="submenu__link">
+                                See more
+                                <span class="submenu__icon" data-feather="arrow-right"></span>
+                            </a>
+                        </div>-->
+                        </div>
+                    </li>
+                </nav>
+            </div>
+
+            <div class="header-left ">
+                <div class="header-left-user">
+                    <a data-toggle="collapse" href="#list" role="button" aria-expanded="false" aria-controls="list" class="header-left-user-link">
+                        <span class="" data-feather="user"></span>
+                    </a>
+                    <!--href="logInPage.html"-->
+                </div>
+                <div class="collapse multi-collapse" id="list"
+                     style="position:absolute;top:40px;left:0px;z-index: 1000;background:white;padding:5px;box-shadow: rgb(203 197 197) 0px 0px 3pt 1pt">
+                    <div class="card card-body">
+                        <div>
+                            <a href="logInPage.html" class="" style="">
+                                ورود
+                            </a>
+                        </div>
+                        <hr style="margin:5px" />
+                        <div>
+                            <a href="profilePage.html" class="">
+                                پروفایل من
+                            </a>
+                        </div>
+                        <hr style="margin:5px" />
+                        <div>
+                            <a href="changePasswordPage.html" class="">
+                                تغییر کلمه عبور
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="header-left-basket ">
+                    <a href="basket.html" class="header-left-basket-link">
+                        <span class="" data-feather="shopping-cart"></span>
+                    </a>
+                    <div class="basket-number">0</div>
+                </div>
+                <div id="basket-message" style="opacity:0">به سبد خرید اضافه شد.</div>
+                <!--<div class="header-left-search-box p-0">
+                <input class="w3-border-0" type="text" placeholder=" جست و جو در دورگا... " name="search">
+                <div class="search-icon">
+                    <i class="fa fa-search"></i>
+                </div>
+            </div>-->
+            </div>
+        </div>
+        <div id="boxes">
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+        </div>
+
+    </header>
+    <div class="content">
+        <div class="row d-flex content-part-1">
+
+            <div class="col-6 col-lg-6 item-detailes">
+                <p class="item-name">میز ناهارخوری 8 نفره جانان</p>
+                <div class="itemId" style="display:none"> </div>
+
+                <div class="item-comment" onclick="goTo('information')">
+                    <div class="lable">نظرات کالا</div>
+                    <div class="assign">:</div>
+                    <span> 19 </span>
+                    <i class="fa fa-comment" title="مشاهده نظرات" data-toggle="tooltip" aria-hidden="true"></i>
+                </div>
+                <div class="item-color">
+                    <div class="lable">رنگ کالا</div>
+                    <div class="assign">:</div>
+                    <select class="my-select" aria-label="">
+                        <option selected>انتخاب کنید</option>
+                        <option value="1"> قرمز </option>
+                        <option value="2">آبی </option>
+                    </select>
+                </div>
+                <div class="item-about">
+                    <div class="lable">درباره کالا</div>
+                    <div class="assign">:</div>
+                    <div class="item-about-div">
+                        <ul>
+                            <li>
+                                جنس دسته :
+                                <span> پلاستیک، فلز </span>
+                            </li>
+                            <li>
+                                جنس روکش کفی :
+                                <span> چرم مصنوعی </span>
+                            </li>
+                            <li>
+                                جنس چرخ :
+                                <span> پلاستیک، فلز </span>
+                            </li>
+                            <li id="more-detailes-tab" onclick="goTo('information')">
+                                بیشتر...
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="item-check">
+                    <div class="lable">وضعیت موجودی کالا</div>
+                    <div class="assign">:</div>
+                    موجود در انبار <i class="fa fa-check" aria-hidden="true"></i>
+                </div>
+                <div class="item-price" onclick="goTo('information')">
+                    <div class="lable">قیمت کالا</div>
+                    <div class="assign">:</div>
+                    <div class="item-price-detail">
+                        <span> تومان </span>
+                        <span> {{toFarsiAndComma(123000)}} </span>
+                        <span> {{toFarsiAndComma(120000)}} </span>
+                    </div>
+                </div>
+
+                <div class="item-count">
+                    <div class="lable">تعداد درخواستی کالا</div>
+                    <div class="assign">:</div>
+                    <div class="item-count-div">
+                        <span class="add">+</span>
+                        <span class="number">1</span>
+                        <span class="minus">-</span>
+                    </div>
+                </div>
+
+                <div class="suggest-card__plus-basket" name="plus-basket">
+
+                    <!--<i class="fa fa-shopping-basket" aria-hidden="true"></i>-->
+                    <span>افزودن به سبد خرید</span>
+                </div>
+
+            </div>
+            <div class="col-6 col-lg-6 product-images-div">
+                <div class="main-img-div">
+                    <!--<figure class="zoom" onmousemove="zoom(event)" style="background-image: url('images/lunchTable.jpg')">-->
+                    <img id="product-img" src='images/shop3/chair1.jpg' style="width: 100%; max-height: 500px;" />
+                    <!--<div class="product-img" style="background-image: url('images/shop3/chair9.jpg')"></div>-->
+                    <!--</figure>-->
+                </div>
+                <div class="more-images">
+                    <div class="other-image" style="background-image: url('images/shop3/chair9.jpg')"></div>
+                    <div class="other-image" style="background-image: url('images/shop3/chair10.jpg')"></div>
+                    <div class="other-image" style="background-image: url('images/shop3/chair11.jpg')"></div>
+
+                    <a data-fancybox data-src="#hidden-content-1" href="javascript:;" class="btn">
+                        <i class="fa fa-picture-o" title="گالری" data-toggle="tooltip" aria-hidden="true"></i>
+                        <br />
+                        گالری محصول
+                    </a>
+                    <div style="display: none;" id="hidden-content-1">
+
+                        <div class="fancy-gallery mb-5">
+                            <div class="row">
+                                <a href="images/shop3/chair10.jpg" class="mb-4 img-fluid" data-fancybox="images">
+                                    <img class=" gallery-image rounded" src="images/shop3/chair11.jpg" alt="" />
+                                </a>
+                                <a href="images/shop3/chair11.jpg" class="mb-4 img-fluid" data-fancybox="images">
+                                    <img class="gallery-image rounded" src="images/shop3/chair10.jpg" alt="" />
+                                </a>
+                                <a href="images/shop3/chair9.jpg" class="mb-4 img-fluid" data-fancybox="images">
+                                    <img class="gallery-image rounded" src="images/shop3/chair9.jpg" alt="" />
+                                </a>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+        <!--<div class="col-lg-3 col-md-3 item-summary-part">
+            <div class="item-summary">
+                <div class="item-summary-img" style="background-image: url('images/lunchTable.jpg')">
+
+                </div>
+                <div class="suggest-card__title">
+                    item.name
+                </div>
+                <div class="itemId" style="display:none"> </div>
+                <div class="suggest-card__description">
+                    <div class="suggest-card__description-price">
+                        <div class="suggest-card__description-price-now suggest-card__description-price-before">
+                            <span>تومان</span>
+                            <span>45678</span>
+                        </div>
+                        <div class="suggest-card__description-price-now suggest-card__description-price-after">
+                            <span>تومان</span>
+                            <span>1234</span>
+                        </div>
+
+                    </div>
+                    <div class="suggest-card__description-percent">
+                        -<span>23</span>%
+                    </div>
+                </div>
+                <div onClick="dontCallLink(event)" class="suggest-card__plus-basket" name="plus-basket">
+
+                    <span>افزودن به سبد خرید</span>
+                    <i class="fa fa-shopping-basket" aria-hidden="true"></i>
+                </div>
+            </div>
+        </div>-->
+        <!-- <div class="">
+
+        <div style="position: relative;"> -->
+        <!--<h1 class="part-title comments-title">
+            درباره محصول
+        </h1>
+        <hr class="hor-hr about" />-->
+
+        <div id="information">
+            <div class="tabbed-bar">
+                <div class="tabs">
+                    <div class="tab__btns">
+                        <button class="tab__btn " data-item="item-1">
+                            <span>مشخصات کالا</span>
+                        </button>
+                        <button class="tab__btn" data-item="item-2">
+                            <span>نظرات</span>
+                        </button>
+                        <button class="tab__btn tab__btn--active" data-item="item-3">
+                            <span> معرفی کالا</span>
+                        </button>
+                    </div>
+
+                    <div class="tab__items">
+                        <div id="item-1" class="tab__item ">
+                            <div class="tab__item1">
+                                <div class="row feature">
+                                    <div class="col-3 col-lg-3 feature-name">حداقل ارتفاع</div>
+                                    <div class="col-9 col-lg-9 feature-amount">
+                                        ۱۵۰ سانتی‌متر
+                                    </div>
+                                </div>
+                                <div class="row feature">
+                                    <div class="col-3 col-lg-3 feature-name">حداکثر  ارتفاع</div>
+                                    <div class="col-9 col-lg-9 feature-amount">
+                                        ۱۰۰ سانتی‌متر
+                                    </div>
+                                </div>
+                                <div class="row feature">
+                                    <div class="col-3 col-lg-3 feature-name">جنس فوم</div>
+                                    <div class="col-9 col-lg-9 feature-amount">
+                                        فوم معمولی
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div id="item-2" class="tab__item">
+                            <div class="tab__item2">
+                                <input type='hidden' id='current_page' />
+                                <input type='hidden' id='show_per_page' />
+                                <ul id="pagingBox" class="comment-items">
+                                    <li v-for="item in items">
+
+                                        <div class="comment-item">
+                                            <div class="comment-item-title">
+                                                <div class="comment-item-title-main">
+                                                    {{ item.name }}
+                                                </div>
+
+                                                <div class="comment-item-title-user">
+                                                    <p id="yearAndMonth" style="display:inline-block">شهریور ۱۴۰۱  </p>
+                                                    <span id="day">۱۶</span>
+                                                    <span class="name">علی علایی</span>
+                                                    <!--<span id="clock" style="margin-left: 20px;"></span>
+                                                    <br />
+                                                    <button id="btn" onclick="date()">r</button>-->
+                                                </div>
+                                            </div>
+                                            <div class="comment-item-description">
+                                                <div class="description-text">
+
+                                                    صندلی خوب و راحتیه. به نسبت قیمتش می ارزه. من پیشنهاد میکنم.
+                                                </div>
+                                                <div class="description-detailes">
+                                                    <div class="positive-point">
+                                                        <ul>
+                                                            <li>سیم بلند</li>
+                                                            <li>قیمت مناسب</li>
+                                                            <li>طراحی کاربردی و زیبا </li>
+                                                            <li>سیم بلند</li>
+                                                        </ul>
+                                                    </div>
+                                                    <div class="negative-point">
+                                                        <ul>
+                                                            <li>سیم کوتاه</li>
+                                                        </ul>
+                                                    </div>
+                                                    <div class="like-and-dislike">
+                                                        <div class="like">
+                                                            <span>0</span>
+                                                            <i class="fa fa-thumbs-up" aria-hidden="true"></i>
+                                                        </div>
+                                                        <div class="dislike">
+                                                            <span>0</span>
+                                                            <i class="fa fa-thumbs-down" aria-hidden="true"></i>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                            </div>
+                                            <hr />
+                                        </div>
+                                    </li>
+                                </ul>
+                                <div id='page_navigation'></div>
+                            </div>
+                        </div>
+                        <div id="item-3" class="tab__item tab__item--active">
+                            <div class="tab__item3">
+                                تقریبا تمام صندلی‌های اداری پایه‌های چرخدار دارند. با این وجود اگر کف دفتر را فرش پوشانده باشد ممکن است به مشکل برخورید و مجبور شوید از چرخ‌های مخصوص فرش استفاده کنید. در واقع رولینگ در جلوگیری از فشار برای رسیدن به اقلام دور از دسترس روی میز مناسب است. تمام صندلی‌های اداری باید به راحتی امکان دسترسی آسان به قسمت‌‌های مختلف میز را فراهم کنند. اگر صندلی به راحتی نچرخد فشار وارد شده برای دسترسی به وسایل مختلف روی میز بازوان را به شدت خسته می‌کند. همچنین پارچه ای که در ساخت صندلی به کار می‌رود باید به گونه ای باشد که فرد پس از ساعت‌ها نشستن بر روی آن عرق نکند. یک صندلی خوب باید حداقل جریان هوا و مقاومت در برابر لکه‌ها را داشته باشد. همچنین دوخت آن باید به گونه‌ای مقاوم باشد و پوست را تحریک نکند.
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+
+
+        <!-- </div>
+        </div> -->
+        <!-- <div class="comments-detailes-part">
+            <div class="comments-detailes">
+                <div id="average-rating"></div>
+                <div class="text">
+                    <span>3</span> امتیاز
+                    <br />
+                    از مجموع <span>30</span> نظر
+                </div>
+                <hr />
+                <div class="bars">
+                    ارزش به نسبت قیمت
+                    <div class="my-progress-bar">
+                        <div class="my-progress-bar-fill"></div>
+                    </div>
+                    طراحی و زیبایی ظاهری
+                    <div class="my-progress-bar">
+                        <div class="my-progress-bar-fill"></div>
+                    </div>
+                    کیفیت ساخت
+                    <div class="my-progress-bar">
+                        <div class="my-progress-bar-fill"></div>
+                    </div>
+                    کارایی و عملکرد
+                    <div class="my-progress-bar">
+                        <div class="my-progress-bar-fill"></div>
+                    </div>
+                </div>
+                <hr />
+                <p class="new-comment-title">شما نیز نظر خود را ثبت کنید</p>
+                <div class="new-comment-link" data-fancybox data-src="#new-comment" href="javascript:;">ثبت نظر</div>
+                <div id="new-comment">
+                    <h3 id="new-comment-title">نظر شما</h3>
+
+                    <div id="new-comment-desc">
+                        <div class="comment-title-part">
+                            <div class="comment-title-text-div">
+                                <p>عنوان نظر : </p>
+                                <h4 class="comment-title"></h4>
+                            </div>
+                            <div class="comment-title-star-div">
+                                <p class="product-review-stars">
+                                    <input type="radio" id="star5" name="rating" value="5" class="visuallyhidden" /><label for="star5">★</label>
+                                    <input type="radio" id="star4" name="rating" value="4" class="visuallyhidden" /><label for="star4">★</label>
+                                    <input type="radio" id="star3" name="rating" value="3" class="visuallyhidden" /><label for="star3">★</label>
+                                    <input type="radio" id="star2" name="rating" value="2" class="visuallyhidden" /><label for="star2">★</label>
+                                    <input type="radio" id="star1" name="rating" value="1" class="visuallyhidden" /><label for="star1">★</label>
+                                </p>
+                            </div>
+
+
+                        </div>
+
+                        <p>متن نظر : </p>
+                        <textarea class="comment-desc"></textarea>
+
+                        <div class="comment-optional">
+                            <div class="comment-optional-item">
+                                <p>نکات مثبت : </p>
+                                <input type="text" class="plus-good-point" /><button class="plus-good-point-button">+ </button>
+                                <div id="plus-good-point-part">
+                                    <p class="warn">     متن وارد شده باید حداقل ۳ کاراکتر باشد</p>
+                                </div>
+                            </div>
+                            <div class="comment-optional-item">
+                                <p>نکات منفی : </p>
+                                <input type="text" class="plus-bad-point" /><button class="plus-bad-point-button">+</button>
+                                <div id="plus-bad-point-part">
+                                    <p class="warn">     متن وارد شده باید حداقل ۳ کاراکتر باشد</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="submit-div">
+                            <a class="submit-comment">ثبت نظر شما</a>
+                            <p class="submit-comment-warn"></p>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div> -->
+        <div class="benefits-items">
+            <div class="benefits-item benefits-item1">
+                <p>  ضمانت بازگشت کالا</p>
+                <img src="images/shop3/return.png" class="img-fluid">
+            </div>
+            <div class="benefits-item benefits-item2">
+                <p>پشتیبانی 24 ساعته</p>
+                <img src="images/shop3/headphon.png" class="img-fluid">
+            </div>
+            <div class="benefits-item benefits-item3">
+                <p>امکان ارسال فوری</p>
+                <img src="images/shop3/delivery.png" class="img-fluid">
+            </div>
+            <div class="benefits-item benefits-item4">
+                <p>پرداخت درب منزل</p>
+                <img src="images/shop3/pay.png" class="img-fluid">
+            </div>
+        </div>
+        <div class="content-part-2">
+            <!--<img class="img-header img-header-right" src="images/durga/HEADER3.png" />-->
+            <h1 class="part-title shineEffect">محصولات مشابه </h1>
+            <div class="part-title-line">
+
+            </div>
+
+            <!--<hr class="hor-hr hr-suggest" />-->
+            <div class="suggest" id="suggest">
+                <div class="suggest-gallery" id="suggest-gallery">
+                    <div class="suggest-card" v-for="item in items">
+
+                        <a v-bind:href="'productPage.html?id=' + item.id">
+                            <div v-if="item.percent>0" class="suggest-card__description-percent">
+                                <!--<i class="fa fa-bookmark" aria-hidden="true"></i>-->
+                                <span>{{ item.percent }}%</span>
+                            </div>
+                            <div class="suggest-img" v-bind:style="{ backgroundImage: 'url(' + item.imgSrc + ')' }">
+                            </div>
+                            <div class="suggest-text">
+                                <div class="suggest-card__title">
+                                    {{ item.name }}
+                                </div>
+                                <div class="itemId" style="display:none"> {{ item.id }}</div>
+                                <div class="suggest-card__description">
+                                    <div class="suggest-card__description-price">
+                                        <!--<div class="suggest-card__description-price-now suggest-card__description-price-before">
+                                            <span>تومان</span>
+                                            <span>{{ toFarsiAndComma(item.oldPrice) }}</span>
+                                        </div>-->
+
+
+                                        <div class="suggest-card__description-price">
+                                            <span>تومان</span>
+                                            <span>{{ toFarsiAndComma(item.price) }}</span>
+                                            <span v-if="item.percent>0">{{ toFarsiAndComma(item.oldPrice) }}</span>
+                                        </div>
+
+                                    </div>
+
+                                </div>
+                                <!--<div class="suggest-card__detailes">
+                                    <div class="suggest-card__rate-and-comments">
+                                        <div class="suggest-card__rate">
+                                            <i class="fa fa-star" aria-hidden="true"></i><span>{{ toFarsiAndComma(calculateRate(item.rates)) }}</span>
+                                        </div>
+                                        <div class="suggest-card__comments">
+                                            <i class="fa fa-comment" aria-hidden="true"></i>
+                                            <span>{{ toFarsiAndComma(item.comments.length) }}</span>
+                                        </div>
+
+                                    </div>
+                                    <div onClick="dontCallLink(event)" class="suggest-card__plus-basket" name="plus-basket">
+                                        <span>+</span>
+                                        <i class="fa fa-shopping-basket" aria-hidden="true"></i>
+                                    </div>
+                                </div>-->
+                            </div>
+                            <div class="add-basket" name="plus-basket" onclick="dontCallLink(event)">
+                                <div>افزودن به سبد خرید</div>
+                                <span class="" data-feather="shopping-cart"></span>
+                            </div>
+
+                        </a>
+                    </div>
+
+                </div>
+
+                <!--<span class="suggest-gallery-btn btn prev" data-feather="chevron-left"></span>
+                <span class="suggest-gallery-btn btn next" data-feather="chevron-right"></span>-->
+                <span class="btn suggest-gallery-btn prev">
+                    <span class="" data-feather="chevron-left"></span>
+                </span>
+                <span class="btn suggest-gallery-btn next">
+                    <span class="" data-feather="chevron-right"></span>
+                </span>
+            </div>
+        </div>
+    </div>
+
+    <div id="footer" class="row d-flex justify-content-around">
+        <div class="col-6 col-lg-6 pt-4 col-sm-12 origin">
+            <h3 class="footer-item-title"> درباره</h3>
+            <div class="footer-item-desc">
+                فروشگاه اینترنتی بلوط بهترین و بیشترین محصولات از برندهای اورجینال خارجی را در اختیار دارد. سوراو گلچینی از بهترین برند های دنیا را برای شما تامین کرده است. خرید از فروشگاه سوراو مانند خرید از آنلاین شاپ معتبر اروپایی است. با توجه به تنوع زیاد محصولات و برند ها، کارشناسان سوراو به شما مشاوره تخصصی رایگان می دهد. فروشگاه سوراو مرکز خرید محصولات اورجینال از برندهای متنوع با قیمت مناسب است. انتخاب بهترین محصول، مناسب پوست و موی شما از بین ۱۰۰ مارک مختلف بسیار مهم و سخت است.
+            </div>
+
+        </div>
+        <div class="col-3 col-lg-3 pt-4 col-sm-12 ">
+            <h3 class="footer-item-title"> مجوز و تاییدیه ها</h3>
+            <div class="footer-item-desc">
+                <img src="images/shop3/namad1.webp" class="namad-img" />
+                <img src="images/shop3/namad2.webp" class="namad-img" />
+                <img src="images/shop3/namad3.webp" class="namad-img" />
+            </div>
+        </div>
+        <div class="col-3 col-lg-3 col-sm-12 p-0 pt-4 d-flex justify-content-between part1">
+            <!--<div class="col-6 col-lg-6">-->
+            <h3 class="footer-item-title">ارتباط با ما </h3>
+            <div class="footer-item-desc">
+                <div class="desc-item"> <i class="fa fa-home"></i>آدرس: <span>تهران، بلوار ميرداماد، جنب دفينه، بازار بزرگ ميرداماد، ساختمان اداری، ط 4، واحد 412</span></div>
+                <div class="desc-item"><i class="fa fa-phone"></i>تماس با ما: <span>021-57826000</span></div>
+                <div class="desc-item"><i class="fa fa-clock-o"></i>ساعت پاسخگويي: <span>شنبه تا چهار شنبه از ساعت 8:30 تا 17:00</span></div>
+                <div class="desc-item"> <i class="fa fa-envelope"></i>پست الکترونیکی: <span> online@rojagroup.com</span></div>
+            </div>
+            <!--</div>-->
+            <!--<div class="col-4 col-lg-4 information">
+                <h3 class="footer-item-title">اطلاعات حساب کاربری </h3>
+                <div class="footer-item-desc">
+                    <a href="#" class="desc-item"><i class="fa fa-user"></i>پروفایل</a>
+                    <a href="#" class="desc-item"><i class="fa fa-comments"></i>نظرات من</a>
+                    <a href="#" class="desc-item"> <i class="fa fa-list"></i>سفارشات</a>
+                </div>
+            </div>-->
+        </div>
+
+        <p class="col-12 col-lg-12 pt-4 col-sm-12 origin" id="last-line">© کلیه حقوق متعلق به فروشگاه اینترنتی بلوط میباشد.</p>
+    </div>
+
+</div>
+<script src="lib/featherIcons/feather.min.js"></script>
+<script>
+    feather.replace();
+</script>
+<script src="js/mainPage.js"></script>
+<script>
+    var height = $('#item-3').css('height');
+    console.log('hhh1 :', height)
+    height = Number(height.substring(0, height.indexOf('p')));
+    height = (height) * 1.25;
+    $('.tab__items').css('height', height + 'px');
+
+    var app = new Vue({
+        el: "#app",
+        data: {
+            basketValues: [],
+            allPrice: 0,
+            items: [
+                {
+                    name: "صندلی اداری مدل سارا",
+                    id: 1,
+                    groupId: 3,
+                    price: 100000,
+                    percent: 0,
+                    oldPrice: 1790000,
+                    rates: [5, 5, 2, 5],
+                    rate: 0,
+                    comments: ["بد بود", "راضی بودم", "خوب بود"],
+                    //{ text: "ضعیف", monthAndYearDate: "شهریور ۱۴۰۱ ", day:"۱۶", name:"علی علایی", desc:"بد بود"}
+                    imgSrc: 'images/shop3/chair6.jpg'
+                },
+                {
+                    name: "صندلی اداری مدل کارمند",
+                    id: 2,
+                    groupId: 5,
+                    price: 200000,
+                    percent: 3,
+                    oldPrice: 1790000,
+                    rates: [4, 4, 5, 4, 5, 4],
+                    rate: 0,
+                    comments: ["راضی بودم", "خوب بود"],
+                    imgSrc: 'images/shop3/chair7.jpg'
+                },
+                {
+                    name: "صندلی اداری مدل صندلی کارمند",
+                    id: 3,
+                    groupId: 1,
+                    price: 300000,
+                    percent: 3,
+                    oldPrice: 1790000,
+                    rates: [3, 4, 5, 2],
+                    rate: 0,
+                    comments: ["بد بود", "راضی بودم", "خوب بود", "راضی بودم", "خوب بود"],
+                    imgSrc: 'images/shop3/chair8.jpg'
+                },
+                {
+                    name: "صندلی کنفرانس مشکی مدل کلاسیک ",
+                    id: 4,
+                    groupId: 2,
+                    price: 400000,
+                    percent: 0,
+                    oldPrice: 1790000,
+                    rates: [1, 4, 3, 2],
+                    rate: 0,
+                    comments: ["بد بود", "راضی بودم", "راضی بودم", "خوب بود"],
+                    imgSrc: 'images/shop3/chair9.jpg'
+                },
+                {
+                    name: "صندلی راحتی مدل آرامش",
+                    id: 5,
+                    groupId: 3,
+                    price: 500000,
+                    percent: 3,
+                    oldPrice: 1790000,
+                    rates: [3, 4, 5, 2],
+                    rate: 0,
+                    comments: ["بد بود"],
+                    imgSrc: 'images/shop3/chair10.jpg'
+                },
+
+                {
+                    name: "صندلی مبلی راحتی مدل سایه",
+                    id: 6,
+                    groupId: 2,
+                    price: 600000,
+                    percent: 3,
+                    oldPrice: 1790000,
+                    rates: [3, 4, 5, 2],
+                    rate: 0,
+                    comments: ["بد بود", "راضی بودم"],
+                    imgSrc: 'images/shop3/chair11.jpg'
+                },
+                {
+                    name: "صندلی کنفرانس مدل صندلی مدیر  ",
+                    id: 7,
+                    groupId: 2,
+                    price: 600000,
+                    percent: 3,
+                    oldPrice: 1790000,
+                    rates: [3, 4, 5, 2],
+                    rate: 0,
+                    comments: ["بد بود", "راضی بودم"],
+                    imgSrc: 'images/shop3/chair12.jpg'
+                },
+            ],
+        },
+        methods: {
+            searchToFind: function (i) {
+                var array = this.items;
+                var x = {};
+                for (var j = 0; j < array.length; j++) {
+                    if (i == array[j].id) {
+                        return array[j];
+                    }
+                }
+
+                return x;
+            },
+            searchToAddBasket: function (i) {
+                var array = this.items;
+                var x = {};
+                for (var j = 0; j < array.length; j++) {
+                    if (i == array[j].id) {
+                        x = {
+                            name: array[j].name,
+                            price: array[j].price,
+                            imgSrc: array[j].imgSrc,
+                            id: array[j].id
+                        }
+
+                        return x;
+                    }
+                }
+
+                return x;
+            },
+            searchToRemoveBasket: function (i) {
+                var array = this.basketValues;
+                var price = 0;
+                for (var j = 0; j < array.length; j++) {
+                    if (i == array[j].id) {
+                        price = array[j].price;
+                        this.basketValues.splice(j, 1);
+                        return price;
+                    }
+                }
+
+            },
+            setBasketValues: function () {
+                this.basketValues = basketValues;
+            },
+            calculateRate(arr) {
+                return arr.reduce((a, b) => a + b, 0) / arr.length
+            },
+            toPersianDigits(x) {
+
+                var id = ['۰', '۱', '۲', '۳', '۴', '۵', '۶', '۷', '۸', '۹'];
+                return x.replace(/[0-9]/g, function (w) {
+                    return id[+w]
+                });
+            },
+            numberWithCommas(x) {
+                return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+            },
+            numberToFixed(x) {
+                return x.toFixed(1);
+            },
+            toFarsiAndComma(x) {
+                var val = x;
+                if (val != Math.floor(val)) {
+                    val = this.numberToFixed(val);
+                }
+                val = this.numberWithCommas(val);
+                val = this.toPersianDigits(val);
+
+                return val;
+            }
+
+        },
+
+    });
+    const suggest_gallery = document.querySelector("#suggest");
+    const suggest_gallery_scroller = suggest_gallery.querySelector("#suggest-gallery");
+    const suggest_gallery_item_size = suggest_gallery.querySelector("div").clientWidth / 2;
+
+    suggest_gallery.querySelector(".btn.next").addEventListener("click", scrollToNextPage);
+    suggest_gallery.querySelector(".btn.prev").addEventListener("click", scrollToPrevPage);
+
+    function scrollToNextPage() {
+        suggest_gallery_scroller.scrollBy({
+            top: 0,
+            left: suggest_gallery_item_size,
+            behavior: "smooth"
+        });
+    }
+
+    function scrollToPrevPage() {
+        suggest_gallery_scroller.scrollBy({
+            top: 0,
+            left: -suggest_gallery_item_size,
+            behavior: "smooth"
+        });
+    }
+
+    var basketValues = [];
+
+    $('[name="plus-basket"]').click(function () {
+
+        var basketNumber = $('.basket-number').text();
+        basketNumber = parseInt(basketNumber);
+        if (basketNumber == 0) {
+            $('.card__description p:last-child').addClass('d-none')
+            $('.basket-price-part').removeClass("d-none");
+            $('.basket-button').removeClass("d-none");
+        }
+
+        basketNumber = basketNumber + 1;
+        $('.basket-number').text(basketNumber);
+
+        var id = Number($(this).parent().parent().find('.itemId').text());
+        var data = app.searchToAddBasket(id);
+        basketValues.push(data);
+        app.setBasketValues();
+
+        var sum = 0;
+        for (var i = 0; i < basketValues.length; i++) {
+            sum += Number(basketValues[i].price);
+        }
+        app.allPrice = sum;
+    });
+
+
+
+    function addScore(score, $domElement) {
+        $("<span class='stars-container'>")
+            .addClass("stars-" + score.toString())
+            .text("★★★★★")
+            .appendTo($domElement);
+    }
+
+
+
+    $(document).on('click', '.submit-comment', function () {
+
+        var commentTitleText = $(this).parent().parent().find('.comment-title').text();
+        var commentDescText = $(this).parent().parent().find('.comment-desc').val();
+        var submitCommentWarn = $('.submit-comment-warn');
+        var warnText = "";
+
+        if (commentTitleText.length == 0)
+            warnText = "هنوز امتیازی داده نشده است. انتخاب این فیلد اجباریست."
+        if (commentDescText.length == 0)
+            warnText = "هنوز متن نظر نوشته نشده است. انتخاب این فیلد اجباریست."
+        if (commentDescText.length != 0 && commentTitleText.length != 0) {
+            warnText = "";
+            date();
+            $.fancybox.close();
+        }
+
+
+        submitCommentWarn.text(warnText);
+        submitCommentWarn.css('display', 'block');
+    });
+
+    $(document).on('click', '#star5', function () {
+        $('.comment-title').text('عالی')
+    });
+    $(document).on('click', '#star4', function () {
+        $('.comment-title').text('خوب')
+    });
+    $(document).on('click', '#star3', function () {
+        $('.comment-title').text('متوسط')
+    });
+    $(document).on('click', '#star2', function () {
+        $('.comment-title').text('بد')
+    });
+    $(document).on('click', '#star1', function () {
+        $('.comment-title').text('بسیار بد')
+    });
+
+    $(document).on('click', '.plus-good-point-button', function () {
+        var text = $(this).prev('input').val();
+        if (text.length < 3) {
+
+            $('#plus-good-point-part').find('.warn').css('display', 'block');
+        }
+        else {
+            $('#plus-good-point-part').find('.warn').css('display', 'none');
+            var make_html = '<div class="plus-good-point-item"><span>+</span>' + text + '<i class="fa fa-trash" aria-hidden="true"></i></div>';
+            $('#plus-good-point-part').append(make_html);
+            $(this).prev('input').val("");
+        }
+
+    });
+    $(document).on('click', '.plus-bad-point-button', function () {
+        var text = $(this).prev('input').val();
+        if (text.length < 3) {
+
+            $('#plus-bad-point-part').find('.warn').css('display', 'block');
+        }
+        else {
+            $('#plus-bad-point-part').find('.warn').css('display', 'none');
+            var make_html = '<div class="plus-bad-point-item"><span>-</span>' + text + '<i class="fa fa-trash" aria-hidden="true"></i></div>';
+            $('#plus-bad-point-part').append(make_html);
+            $(this).prev('input').val("");
+        }
+
+    });
+    $(document).on('click', '.plus-good-point-item i', function () {
+        $(this).parent().remove();
+    });
+    $(document).on('click', '.plus-bad-point-item i', function () {
+        $(this).parent().remove();
+    });
+
+
+    $(document).on('click', '.other-image', function () {
+        var imgSrc = $(this).css('background-image');
+        imgSrc = imgSrc.substring(imgSrc.indexOf('images'), imgSrc.indexOf(')') - 1)
+        $('#product-img').attr('src', imgSrc);
+    });
+
+    function goTo(id) {
+        let pos = document.querySelector('#' + id);
+        console.log('pos :', pos.offsetTop);
+        window.scrollTo({
+            top: pos.offsetTop - 60,
+            behavior: 'smooth',
+        });
+    }
+
+    var options = { year: 'numeric', month: 'long', day: 'numeric' };
+    function date() {
+        var date = new Date();
+        var hourOffset = 3;
+        date.setUTCHours(date.getUTCHours(), date.getUTCMinutes());
+        var time = date.getTime();
+        date.setUTCFullYear(date.getUTCFullYear(), 2, 22);
+        var dstStart = date.getTime();
+        date.setUTCFullYear(date.getUTCFullYear(), 8, 22);
+        var dstEnd = date.getTime();
+        if (time > dstStart && time < dstEnd) hourOffset = 4;
+        date.setUTCHours(date.getUTCHours() + hourOffset, date.getUTCMinutes() + 30);
+        var output = date.getUTCHours() + ":" + date.getUTCMinutes() + ":" + date.getUTCSeconds();
+        var output = date.getUTCHours() + " : " + date.getUTCMinutes();
+
+        var today = "";
+        today = new Date().toLocaleDateString('fa-IR', options);
+
+        var arr = [];
+        arr[1] = today.substring(0, today.indexOf(' '));
+        arr[0] = today.substring(today.indexOf(' ') + 1);
+
+        //document.getElementById("clock").innerHTML = output;
+        document.getElementById("yearAndMonth").innerHTML = arr[0];
+        document.getElementById("day").innerHTML = " " + arr[1];
+        console.log('arrrr : ', arr)
+    }
+
+
+    $(document).on('click', '.dislike i', function () {
+        toggle($(this), 'dislike');
+    })
+    $(document).on('click', '.like i', function () {
+        toggle($(this), 'like');
+    })
+    function toggle(x, y) {
+        var num = Number(x.parent().find('span').text());
+        var color = x.css('color');
+        var another = x.parent().parent();
+        var anotherColor = "";
+        var anotherNumber = 0;
+
+        if (y == 'like')
+            another = another.find('.dislike');
+        else
+            another = another.find('.like');
+
+        anotherColor = another.find('i').css('color');
+        anotherNumber = Number(another.find('span').text());
+
+        if (color == 'rgb(221, 221, 221)') {
+            if (y == 'like') {
+                if (anotherColor != 'rgb(221, 221, 221)') {
+                    another.find('i').css('color', 'rgb(221, 221, 221)');
+                    anotherNumber = anotherNumber - 1;
+                    another.find('span').text(anotherNumber);
+                }
+                num = num + 1;
+                x.css('color', 'green');
+            }
+            else {
+                if (anotherColor != 'rgb(221, 221, 221)') {
+                    another.find('i').css('color', 'rgb(221, 221, 221)');
+                    anotherNumber = anotherNumber - 1;
+                    another.find('span').text(anotherNumber);
+                }
+                num = num + 1;
+                x.css('color', 'red');
+            }
+        } else {
+            x.css('color', 'rgb(221, 221, 221)');
+            num = num - 1;
+        }
+        x.parent().find('span').text(num);
+    }
+
+
+    //var app = new Vue({
+    //    el: "#app2",
+    //    data: {
+    //        iss: [{ name: '1', }, { name: '2' }, { name: '3' }, { name: '4' }, { name: '5' },
+    //        { name: '6' }, { name: '7' }, { name: '8' }, { name: '9' }],
+    //    }
+    //});
+
+
+    jQuery(document).ready(function () {
+        setTimeout(function () {
+            var show_per_page = 4;
+            var number_of_items = $('#pagingBox li').length / 6;
+            var number_of_pages = Math.ceil(number_of_items / show_per_page);
+
+            $('#current_page').val(0);
+            $('#show_per_page').val(show_per_page);
+
+            var navigation_html = '<a class="next_link" href="javascript:next();">بعد</a>';
+            var current_link = 0;
+            while (number_of_pages > current_link) {
+                navigation_html += '<a class="page_link" href="javascript:go_to_page(' + current_link + ')" longdesc="' + current_link + '">' + (current_link + 1) + '</a>';
+                current_link++;
+            }
+            navigation_html += '<a class="previous_link" href="javascript:previous();">قبل</a>';
+
+            $('#page_navigation').html(navigation_html);
+
+            $('#page_navigation .page_link:first').addClass('active_page');
+            $('#pagingBox').children().css('display', 'none');
+            $('#pagingBox').children().slice(0, show_per_page).css('display', 'block');
+        }, 100);
+
+
+    });
+
+    function previous() {
+        new_page = parseInt($('#current_page').val()) - 1;
+        if ($('.active_page').prev('.page_link').length == true) {
+            go_to_page(new_page);
+            goTo('information');
+        }
+    }
+
+    function next() {
+        new_page = parseInt($('#current_page').val()) + 1;
+        if ($('.active_page').next('.page_link').length == true) {
+            go_to_page(new_page);
+            goTo('information');
+        }
+    }
+
+    function go_to_page(page_num) {
+        var show_per_page = parseInt($('#show_per_page').val());
+        start_from = page_num * show_per_page;
+        end_on = start_from + show_per_page;
+        $('#pagingBox').children().css('display', 'none').slice(start_from, end_on).css('display', 'block');
+        $('.page_link[longdesc=' + page_num + ']').addClass('active_page').siblings('.active_page').removeClass('active_page');
+        $('#current_page').val(page_num);
+        goTo('information');
+    }
+
+    const urlParams = new URLSearchParams(window.location.search);
+    const productId = urlParams.get('id');
+
+    var product = app.searchToFind(productId)
+    //console.log('product : ', product);
+    var itemSummary = $('.item-summary');
+    itemSummary.find('.suggest-card__title').text(product.name);
+    itemSummary.find('.itemId').text(product.id);
+    itemSummary.find('.item-summary-img').css('background-image', 'url(' + product.imgSrc + ')');
+    itemSummary.find('.suggest-card__description-price-before span:nth-child(2)').text(toFarsiAndComma(product.oldPrice));
+    itemSummary.find('.suggest-card__description-price-after span:nth-child(2)').text(toFarsiAndComma(product.price));
+    itemSummary.find('.suggest-card__description-percent span').text(product.percent)
+
+    $('.item-name').text(product.name);
+    $('.item-rate span').text(numberToFixed(calculateRate(product.rates)));
+    $('.item-comment span').text(product.comments.length);
+
+    $('.item-detailes ').find('.itemId').text(product.id);
+    //$('.zoom').css('background-image', 'url(' + product.imgSrc + ')');
+    //$('#product-img').css('background-image', 'url(' + product.imgSrc + ')');
+    //$('#product-img').attr('src', product.imgSrc);
+
+    $('.comments-detailes').find('.text span:nth-child(1)').text(toFarsiAndComma(calculateRate(product.rates)));
+    $('.comments-detailes').find('.text span:nth-child(2)').text(toFarsiAndComma(product.comments.length));
+
+    var rate = numberToFixed(calculateRate(product.rates)) * 20;
+
+
+    if (rate % 10 < 3) {
+        rate = rate - (rate % 10);
+    } else if (rate % 10 < 5 && rate % 10 > 3) {
+        rate = rate - (rate % 10) + 3;
+    }
+    else if (rate % 10 < 8 && rate % 10 > 5) {
+        rate = rate - (rate % 10) + 5;
+    }
+    else if (rate % 10 > 8) {
+        rate = rate - (rate % 10) + 8;
+    }
+    console.log('rate : ', rate);
+    addScore(rate, $("#average-rating"));
+
+    function dontCallLink(event) {
+        event.preventDefault()
+    }
+
+
+</script>
+<script>
+    const tabBtn = document.querySelectorAll(".tab__btn");
+    const tabContents = document.querySelectorAll(".tab__item");
+
+    tabBtn.forEach(function (element) {
+        element.addEventListener("click", openTabs);
+    });
+
+
+    $('.item-comment').on('click', function () {
+        tabBtn.forEach(function (element) {
+            element.classList.remove("tab__btn--active")
+        });
+        $('[data-item="item-2"]').addClass("tab__btn--active");
+
+        tabContents.forEach(function (element) {
+            element.classList.remove("tab__item--active")
+        });
+        $('#item-2').addClass("tab__item--active");
+
+        var height = $('#item-2').css('height');
+        //console.log('height : ',height)
+        $(".tab__items").css('height', height)
+    });
+
+    $('#more-detailes-tab').on('click', function () {
+        tabBtn.forEach(function (element) {
+            element.classList.remove("tab__btn--active")
+        });
+        $('[data-item="item-1"]').addClass("tab__btn--active");
+
+        tabContents.forEach(function (element) {
+            element.classList.remove("tab__item--active")
+        });
+        $('#item-1').addClass("tab__item--active");
+
+        var height = $('#item-1').css('height');
+        //console.log('height : ',height)
+        $(".tab__items").css('height', height)
+    });
+
+    function openTabs(evt) {
+        const btnTarget = evt.currentTarget;
+        const item = btnTarget.dataset.item;
+
+        var height = $(`#${item}`).css('height');
+        console.log('height : ', height)
+        $(".tab__items").css('height', height)
+
+        tabContents.forEach(function (item) {
+            item.classList.remove("tab__item--active");
+        });
+
+        tabBtn.forEach(function (item) {
+            item.classList.remove("tab__btn--active");
+        });
+
+        document.querySelector(`#${item}`).classList.add("tab__item--active");
+
+        btnTarget.classList.add("tab__btn--active");
+    }
+
+    $(document).on('click', '.minus', function () {
+        var numberElement = $(this).parent().find('.number');
+        var number = numberElement.text();
+        number = parseInt(number);
+
+        if (number == 1) {
+            alert('no');
+        }
+        else {
+            number = number - 1;
+            numberElement.text(number);
+        }
+    });
+
+    $(document).on('click', '.add', function () {
+        var numberElement = $(this).parent().find('.number');
+        var number = numberElement.text();
+        number = parseInt(number);
+        number = number + 1;
+        numberElement.text(number);
+    });
+
+</script>

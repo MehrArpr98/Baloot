@@ -1,0 +1,86 @@
+@font-face {
+    font-family: "iranyekan";
+    src : url("../font/iranyekan-cufonfonts/Qs_Iranyekan.ttf") format("truetype");
+}
+
+.row{
+    margin:0;
+}
+#footer {
+    height: max-content;
+    width: 100%;
+    box-shadow: 0 0 5pt 2pt #a19a9a;
+    direction: rtl;
+    text-align: right;
+    margin-top: 1rem;
+    background-image: linear-gradient(292deg, #ffffff 0%, #d5d5d5 100%);
+}
+.footer-item-title {
+    font-size: 1.3rem;
+    font-weight: 600;
+    border-bottom: 2px solid var(--main-yellow);
+    width: max-content;
+    padding-bottom: 0.5rem;
+}
+.footer-item-desc {
+    font-size: 1.15rem;
+    margin-top: 1.5rem;
+}
+    .footer-item-desc .desc-item {
+        margin-bottom: .5rem;
+        font-weight: 600;
+        
+    }
+.information .footer-item-desc .desc-item {
+    color: black;
+    display: block;
+    transition: .3s ease-in-out;
+}
+    .information .footer-item-desc .desc-item:hover {
+        text-decoration: none;
+        color: var(--middle-green)
+    }
+        .footer-item-desc .desc-item i {
+            font-size: 1rem;
+            padding-left: 3px;
+        }
+        .footer-item-desc .desc-item:nth-child(1) i {
+            font-size: 1.1rem;
+        }
+        .footer-item-desc .desc-item:last-child i {
+            font-size: .9rem;
+        }
+        .footer-item-desc .desc-item span {
+            color: gray;
+            font-weight: 400;
+        }
+.footer-item-desc .namad-img {
+    width: 80px;
+    height: 80px
+}
+#last-line {
+    border-top: 1px solid var(--main-yellow);
+    width: calc(100% - 20rem);
+    text-align: center;
+    padding: 1.2rem;
+    font-size: 1rem;
+    color: #919191;
+    margin: 2rem 10rem 0;
+}
+
+@media screen and (max-width: 576px) {
+    .content .content-part-2 .suggest .suggest-gallery .suggest-card {
+        flex: 0 0 45%;
+    }
+    .content {
+        padding: 190px 0 71px;
+    }
+    .part1,
+    .origin {
+        min-width: 100% !important;
+    }
+    .information {
+        min-width: 100% !important;
+        padding-top: 2rem;
+    }
+}
