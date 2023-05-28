@@ -1,0 +1,537 @@
+<!-- jQuery library -->
+<script src="lib/jquery/jquery.min.js"></script>
+<link rel="stylesheet" href="lib/font-awesome-4.7.0/css/font-awesome.min.css">
+<!-- bootstrap -->
+<script src="lib/bootstrap/bootstrap.min.js"></script>
+<link rel="stylesheet" href="lib/bootstrap/bootstrap.min.css">
+<!-- fancybox -->
+<link rel="stylesheet" href="lib/fancybox/fancybox.css">
+<script src="lib/fancybox/fancybox.js"></script>
+<!-- VUE JS -->
+<script src="lib/vue/vue.js"></script>
+
+<link rel="stylesheet" href="css/mainPage.css">
+<link rel="stylesheet" href="css/header.css">
+<link rel="stylesheet" href="css/footer.css">
+<link rel="stylesheet" href="css/basket.css">
+<script src="lib/featherIcons/feather.min.js"></script>
+<script src="js/mainPage.js"></script>
+
+
+<div id="app">
+    <header id="main">
+        <img src="images/logo.png" class="img-fluid logoImg">
+        <h4 class="logoName">چوب بلوط</h4>
+        <h6 class="logoDesc">میز و صندلی اداری</h6>
+
+        <div class="header d-flex justify-content-between">
+            <div class="header-right ">
+                <nav class="navigation">
+                    <li class="navigation__item">
+                        <a href="categoryPage.html" class="navigation__link">
+                            <span class="navigation__link__icon" data-feather="grid"></span>
+                            <span class="navigation__link__title">محصولات</span>
+                        </a>
+                    </li>
+                    <li class="navigation__item">
+                        <a href="index.html" class="navigation__link">
+                            <span class="navigation__link__icon" data-feather="home"></span>
+                            <span class="navigation__link__title">خانه</span>
+                        </a>
+                    </li>
+                    <li class="navigation__item navigation__item--has-submenu">
+                        <a href="#" class="navigation__link">
+                            <span class="navigation__link__icon" data-feather="list"></span>
+                            <span class="navigation__link__title">دسته بندی</span>
+                        </a>
+                        <div class="submenu">
+                            <div class="submenu__content">
+                                <div class="submenu__box">
+                                    <ul class="submenu-navigation">
+                                        <li class="submenu-navigation__item">
+                                            <a href="#" class="submenu-navigation__link">
+                                                <!--<i class="fa fa-chair submenu-navigation__icon"></i>-->
+                                                <img class="submenu-navigation__icon" src="images/office-chair.png">
+                                                <span class="submenu-navigation__title">صندلی</span>
+                                            </a>
+                                        </li>
+                                        <li class="submenu-navigation__item">
+                                            <a href="#" class="submenu-navigation__link">
+                                                <!--<i class="fa fa-table submenu-navigation__icon"></i>-->
+                                                <img class="submenu-navigation__icon" src="images/desk.png">
+                                                <span class="submenu-navigation__title">
+                                                    میز
+                                                    <!--<span class="label">popular</span>-->
+                                                </span>
+                                            </a>
+                                        </li>
+
+                                    </ul>
+                                </div>
+                                <div class="submenu__box">
+
+                                </div>
+                                <!--<div class="submenu__box">
+                                <img class="submenu__image" src="https://images.unsplash.com/photo-1661423063753-ea9121c6abb2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=3840&q=80">
+                            </div>-->
+                            </div>
+                            <!--<div class="submenu__footer">
+                            <a href="#" class="submenu__link">
+                                See more
+                                <span class="submenu__icon" data-feather="arrow-right"></span>
+                            </a>
+                        </div>-->
+                        </div>
+                    </li>
+                </nav>
+            </div>
+
+            <div class="header-left ">
+                <div class="header-left-user">
+                    <a data-toggle="collapse" href="#list" role="button" aria-expanded="false" aria-controls="list" class="header-left-user-link">
+                        <span class="" data-feather="user"></span>
+                    </a>
+                    <!--href="logInPage.html"-->
+                </div>
+                <div class="collapse multi-collapse" id="list"
+                     style="position:absolute;top:40px;left:0px;z-index: 1000;background:white;padding:5px;box-shadow: rgb(203 197 197) 0px 0px 3pt 1pt">
+                    <div class="card card-body">
+                        <div>
+                            <a href="logInPage.html" class="" style="">
+                                ورود
+                            </a>
+                        </div>
+                        <hr style="margin:5px" />
+                        <div>
+                            <a href="profilePage.html" class="">
+                                پروفایل من
+                            </a>
+                        </div>
+                        <hr style="margin:5px" />
+                        <div>
+                            <a href="changePasswordPage.html" class="">
+                                تغییر کلمه عبور
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="header-left-basket ">
+                    <a href="basket.html" class="header-left-basket-link">
+                        <span class="" data-feather="shopping-cart"></span>
+                    </a>
+                    <div class="basket-number">2</div>
+                </div>
+                <div id="basket-message" style="opacity:0">به سبد خرید اضافه شد.</div>
+                <!--<div class="header-left-search-box p-0">
+                <input class="w3-border-0" type="text" placeholder=" جست و جو در دورگا... " name="search">
+                <div class="search-icon">
+                    <i class="fa fa-search"></i>
+                </div>
+            </div>-->
+            </div>
+        </div>
+        <div id="boxes">
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+        </div>
+
+    </header>
+    <div class="content" id="content">
+        <div class="row main-div pt-5">
+            <div class="col-lg-4 col-md-12 pb-4">
+                <div class="cart">
+                    <div class="cart-title">
+                        جزییات پرداخت
+                    </div>
+
+                    <div class="cart-item">
+
+                        <div class="cart-item-div">
+                            مبلغ کل <span>تومان </span> <span>{{ toFarsiAndComma(allPrice) }}</span>
+                        </div>
+                        <div class="cart-item-div">
+                            هزینه ارسال <span>تومان </span> <span>{{ toFarsiAndComma(25000) }}</span>
+                        </div>
+                        <hr />
+                        <div class="cart-item-div">
+                            مبلغ قابل پرداخت   <span>تومان </span> <span>{{ toFarsiAndComma(allPrice + 25000) }}</span>
+                        </div>
+
+                    </div>
+                </div>
+                <a href="javascript:;" class="btn buy-btn btn-block">پرداخت و خرید</a>
+                <!--@* <a data-toggle="modal" data-target="#login_modal" data-redirect="https://rojashop.com/step1" href="javascript:;" class="btn btn-firoze btn-block">پرداخت و خرید</a>*@-->
+            </div>
+
+            <div class="col-lg-8 col-md-12 pb-4">
+                <div class="cart">
+                    <div class="cart-title">
+                        اقلام سفارش داده شده
+                    </div>
+
+                    <div class="cart-item detailes row" v-for="basketValue in basketValues">
+                        <p style="display:none" name="hiddenId"> {{ basketValue.id }} </p>
+
+                        <div class="col-lg-2 col-md-2 col-sm-2 p-0">
+                            <div class="cart-item-img" v-bind:style="{ backgroundImage: 'url(' + basketValue.imgSrc + ')' }"></div>
+                        </div>
+                        <div class="cart-item-name col-lg-4 col-md-4 col-sm-4">
+                            {{ basketValue.name }}
+                        </div>
+                        <div class="cart-item-price col-lg-3 col-md-3 col-sm-3 ">
+                            {{ toFarsiAndComma(basketValue.price) }}
+                        </div>
+                        <div class="cart-item-count col-lg-2 col-md-2 col-sm-2">
+                            <div class="d-flex cart-item-count-div">
+                                <span class="add">+</span>
+                                <span class="number">{{ toFarsiAndComma(basketValue.count) }}</span>
+                                <span class="minus">-</span>
+                            </div>
+                        </div>
+                        <div class="cart-item-remove col-lg-1 col-md-1 col-sm-1 p-0">
+                            <i class='fa fa-remove'></i>
+                        </div>
+                    </div>
+                    <div v-if="basketValues.length == 0" class="cart-item row">
+                        .کاربر گرامی، سبد خرید شما خالی است
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+    <div id="footer" class="row d-flex justify-content-around">
+        <div class="col-6 col-lg-6 pt-4 col-sm-12 origin">
+            <h3 class="footer-item-title"> درباره</h3>
+            <div class="footer-item-desc">
+                فروشگاه اینترنتی بلوط بهترین و بیشترین محصولات از برندهای اورجینال خارجی را در اختیار دارد. سوراو گلچینی از بهترین برند های دنیا را برای شما تامین کرده است. خرید از فروشگاه سوراو مانند خرید از آنلاین شاپ معتبر اروپایی است. با توجه به تنوع زیاد محصولات و برند ها، کارشناسان سوراو به شما مشاوره تخصصی رایگان می دهد. فروشگاه سوراو مرکز خرید محصولات اورجینال از برندهای متنوع با قیمت مناسب است. انتخاب بهترین محصول، مناسب پوست و موی شما از بین ۱۰۰ مارک مختلف بسیار مهم و سخت است.
+            </div>
+
+        </div>
+        <div class="col-3 col-lg-3 pt-4 col-sm-12 ">
+            <h3 class="footer-item-title"> مجوز و تاییدیه ها</h3>
+            <div class="footer-item-desc">
+                <img src="images/namad1.webp" class="namad-img" />
+                <img src="images/namad2.webp" class="namad-img" />
+                <img src="images/namad3.webp" class="namad-img" />
+            </div>
+        </div>
+        <div class="col-3 col-lg-3 col-sm-12 p-0 pt-4 d-flex justify-content-between part1">
+            <h3 class="footer-item-title">ارتباط با ما </h3>
+            <div class="footer-item-desc">
+                <div class="desc-item"> <i class="fa fa-home"></i>آدرس: <span>تهران، بلوار ميرداماد، جنب دفينه، بازار بزرگ ميرداماد، ساختمان اداری، ط 4، واحد 412</span></div>
+                <div class="desc-item"><i class="fa fa-phone"></i>تماس با ما: <span>021-57826000</span></div>
+                <div class="desc-item"><i class="fa fa-clock-o"></i>ساعت پاسخگويي: <span>شنبه تا چهار شنبه از ساعت 8:30 تا 17:00</span></div>
+                <div class="desc-item"> <i class="fa fa-envelope"></i>پست الکترونیکی: <span> online@rojagroup.com</span></div>
+            </div>
+        </div>
+
+        <p class="col-12 col-lg-12 pt-4 col-sm-12 origin" id="last-line">© کلیه حقوق متعلق به فروشگاه اینترنتی بلوط میباشد.</p>
+    </div>
+
+</div>
+
+<script>
+    jQuery(document).ready(function () {
+        setTimeout(function () {
+            app.allPrice = app.calculateSum();
+            $('.card__description p:last-child').addClass('d-none')
+            $('.basket-price-part').removeClass("d-none");
+            $('.basket-button').removeClass("d-none");
+
+        }, 100)
+    });
+
+
+    var app = new Vue({
+        el: "#app",
+        data: {
+            basketValues: [{
+                name: "صندلی کنفرانس مدل نارین",
+                id: 1,
+                price: 100000,
+                percent: 3,
+                oldPrice: 1790000,
+                rates: [5, 5, 2, 5],
+                rate: 0,
+                comments: ["بد بود", "راضی بودم", "خوب بود"],
+                //{ text: "ضعیف", monthAndYearDate: "شهریور ۱۴۰۱ ", day:"۱۶", name:"علی علایی", desc:"بد بود"}
+                imgSrc: 'images/chair10.jpg',
+                count: 1
+            },
+            {
+                name: " صندلی اداری مدل کلاسیک",
+                id: 2,
+                price: 200000,
+                percent: 3,
+                oldPrice: 1790000,
+                rates: [4, 4, 5, 4, 5, 4],
+                rate: 0,
+                comments: ["راضی بودم", "خوب بود"],
+                imgSrc: 'images/chair5.jpg',
+                count: 1
+            },],
+            allPrice: 0,
+            items: [
+                {
+                    name: "صندلی کنفرانس مدل نارین",
+                    id: 1,
+                    price: 100000,
+                    percent: 3,
+                    oldPrice: 1790000,
+                    rates: [5, 5, 2, 5],
+                    rate: 0,
+                    comments: ["بد بود", "راضی بودم", "خوب بود"],
+                    //{ text: "ضعیف", monthAndYearDate: "شهریور ۱۴۰۱ ", day:"۱۶", name:"علی علایی", desc:"بد بود"}
+                    imgSrc: 'images/chair10.jpg',
+                    count: 1
+                },
+                {
+                    name: "صندلی اداری مدل کلاسیک",
+                    id: 2,
+                    price: 200000,
+                    percent: 3,
+                    oldPrice: 1790000,
+                    rates: [4, 4, 5, 4, 5, 4],
+                    rate: 0,
+                    comments: ["راضی بودم", "خوب بود"],
+                    imgSrc: 'images/chair5.jpg',
+                    count: 1
+                },
+            ],
+        },
+        methods: {
+            searchToAddBasket: function (i) {
+                var array = this.items;
+                var basketArray = this.basketValues;
+                console.log(this.items)
+                var x = {};
+                for (var j = 0; j < basketArray.length; j++) {
+                    if (i == basketArray[j].id) {
+                        console.log('*')
+                        x = {
+                            name: basketArray[j].name,
+                            price: basketArray[j].price,
+                            imgSrc: basketArray[j].imgSrc,
+                            id: basketArray[j].id,
+                            count: Number(basketArray[j].count) + 1
+                        }
+                        this.basketValues[j].count = Number(basketArray[j].count + 1);
+                        return x;
+                    }
+                }
+                for (var j = 0; j < array.length; j++) {
+                    if (i == array[j].id) {
+                        console.log('**')
+                        x = {
+                            name: array[j].name,
+                            price: array[j].price,
+                            imgSrc: array[j].imgSrc,
+                            id: array[j].id,
+                            count: 1
+                        }
+                        basketValues.push(x)
+                        return x;
+                    }
+                }
+                return x;
+            },
+            searchToRemoveBasket: function (i) {
+                var array = this.basketValues;
+                var x = 0;
+                for (var j = 0; j < array.length; j++) {
+                    if (i == array[j].id) {
+                        x = array[j];
+
+                        if (array[j].count == 1) {
+                            this.basketValues.splice(j, 1);
+                        }
+                        else {
+                            this.basketValues[j].count = this.basketValues[j].count - 1;
+                        }
+                        return x;
+                    }
+                }
+
+            },
+            setBasketValues: function () {
+                this.basketValues = basketValues;
+            },
+            setCount: function (i, count) {
+                var array = app.basketValues;
+                for (var j = 0; j < array.length; j++) {
+                    if (i == array[j].id) {
+                        app.basketValues[j].count = count;
+                    }
+                }
+            },
+            calculateSum() {
+                var array = app.basketValues;
+                var sum = 0;
+
+                for (var j = 0; j < array.length; j++) {
+                    sum += (array[j].price) * array[j].count;
+                }
+
+                return sum;
+            },
+            calculateBasketLength() {
+                var array = app.basketValues;
+                var sum = 0;
+
+                for (var j = 0; j < array.length; j++) {
+                    sum += (array[j].count);
+                }
+
+                return sum;
+            },
+            calculateRate(arr) {
+                return arr.reduce((a, b) => a + b, 0) / arr.length
+            },
+            toPersianDigits(x) {
+
+                var id = ['۰', '۱', '۲', '۳', '۴', '۵', '۶', '۷', '۸', '۹'];
+                return x.replace(/[0-9]/g, function (w) {
+                    return id[+w]
+                });
+            },
+            numberWithCommas(x) {
+                return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+            },
+            numberToFixed(x) {
+                return x.toFixed(1);
+            },
+            toFarsiAndComma(x) {
+                var val = x;
+                if (val != Math.floor(val)) {
+                    val = this.numberToFixed(val);
+                }
+                val = this.numberWithCommas(val);
+                val = this.toPersianDigits(val);
+
+                return val;
+            }
+
+        },
+
+    });
+
+    var basketValues = app.items;
+    app.basketValues = app.items;
+
+    $(document).on('click', '.cart-item-remove i', function () {
+
+        var id = $(this).parent().parent().find('[name="hiddenId"]').text();
+        app.setCount(id, 1);
+        app.searchToRemoveBasket(id);
+        app.setBasketValues();
+
+        var basketNumber = app.calculateBasketLength();
+        $('.basket-number').text(basketNumber);
+        if (basketNumber == 0) {
+            $('.card__description p:last-child').removeClass('d-none')
+            $('.basket-price-part').addClass("d-none");
+            $('.basket-button').addClass("d-none");
+        }
+
+        app.allPrice = app.calculateSum();
+
+    });
+
+    $(document).on('click', '.remove-from-basket', function () {
+
+        var id = $(this).parent().find('[name="hiddenId"]').text();
+        app.setCount(id, 1);
+        app.searchToRemoveBasket(id);
+        app.setBasketValues();
+
+        var basketNumber = app.calculateBasketLength();
+        $('.basket-number').text(basketNumber);
+        if (basketNumber == 0) {
+            $('.card__description p:last-child').removeClass('d-none')
+            $('.basket-price-part').addClass("d-none");
+            $('.basket-button').addClass("d-none");
+        }
+
+        app.allPrice = app.calculateSum();
+
+    });
+
+    $(document).on('click', '.add', function () {
+
+        var basketNumber = $('.basket-number').text();
+        basketNumber = parseInt(basketNumber);
+        basketNumber = basketNumber + 1;
+
+
+        if (basketNumber == 0) {
+
+            $('.card__description p:last-child').addClass('d-none')
+            $('.basket-price-part').removeClass("d-none");
+            $('.basket-button').removeClass("d-none");
+        }
+
+        $('.basket-number').text(basketNumber);
+
+
+        var id = $(this).parent().parent().parent().find('[name="hiddenId"]').text();
+        var addCount = Number(app.searchToAddBasket(id).count);
+
+        app.setBasketValues();
+        app.setCount(id, addCount);
+        blurMe('.main-div');
+
+
+    });
+
+    $(document).on('click', '.minus', function () {
+
+        var basketNumber = $('.basket-number').text();
+        basketNumber = parseInt(basketNumber);
+        basketNumber = basketNumber - 1;
+
+
+        if (basketNumber == 0) {
+
+            $('.card__description p:last-child').addClass('d-none')
+            $('.basket-price-part').removeClass("d-none");
+            $('.basket-button').removeClass("d-none");
+        }
+
+        $('.basket-number').text(basketNumber);
+
+        var id = $(this).parent().parent().parent().find('[name="hiddenId"]').text();
+        app.searchToRemoveBasket(id);
+
+        app.setBasketValues();
+        app.allPrice = app.calculateSum();
+    });
+
+    function blurMe(x) {
+        var element = $(x);
+        element.addClass("blur");
+        setTimeout(function () {
+            element.removeClass("blur");
+            app.allPrice = app.calculateSum();
+        }, 1000);
+    }
+</script>
+
+<script>
+    feather.replace();
+</script>
+<script>
+    var x = $(".submenu__box:nth-child(1)").css("width");
+    x = Number(x.substring(0, x.indexOf('p')))
+    x = x + 20;
+    console.log("x :", x)
+    $(".submenu__box:nth-child(2)").css("width", "calc(100% - " + x + "px)");
+
+</script>
